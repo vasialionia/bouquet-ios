@@ -1,0 +1,300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
+		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
+		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
+		83F979DF1957347100AE1A06 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83F979DD1957347100AE1A06 /* InfoPlist.strings */; };
+		83F979E11957347100AE1A06 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F979E01957347100AE1A06 /* main.m */; };
+		83F979E51957347100AE1A06 /* BQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F979E41957347100AE1A06 /* BQAppDelegate.m */; };
+		83F979E71957347100AE1A06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F979E61957347100AE1A06 /* Images.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		83F979D81957347100AE1A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		83F979DC1957347100AE1A06 /* Bouquet-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bouquet-Info.plist"; sourceTree = "<group>"; };
+		83F979DE1957347100AE1A06 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		83F979E01957347100AE1A06 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		83F979E21957347100AE1A06 /* Bouquet-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bouquet-Prefix.pch"; sourceTree = "<group>"; };
+		83F979E31957347100AE1A06 /* BQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQAppDelegate.h; sourceTree = "<group>"; };
+		83F979E41957347100AE1A06 /* BQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQAppDelegate.m; sourceTree = "<group>"; };
+		83F979E61957347100AE1A06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		83F979ED1957347100AE1A06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		83F979CE1957347100AE1A06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
+				83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */,
+				83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		83F979C81957347000AE1A06 = {
+			isa = PBXGroup;
+			children = (
+				83F979DA1957347100AE1A06 /* Bouquet */,
+				83F979D31957347100AE1A06 /* Frameworks */,
+				83F979D21957347100AE1A06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		83F979D21957347100AE1A06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				83F979D11957347100AE1A06 /* Bouquet.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		83F979D31957347100AE1A06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83F979D41957347100AE1A06 /* Foundation.framework */,
+				83F979D61957347100AE1A06 /* CoreGraphics.framework */,
+				83F979D81957347100AE1A06 /* UIKit.framework */,
+				83F979ED1957347100AE1A06 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		83F979DA1957347100AE1A06 /* Bouquet */ = {
+			isa = PBXGroup;
+			children = (
+				83F979E31957347100AE1A06 /* BQAppDelegate.h */,
+				83F979E41957347100AE1A06 /* BQAppDelegate.m */,
+				83F979E61957347100AE1A06 /* Images.xcassets */,
+				83F979DB1957347100AE1A06 /* Supporting Files */,
+			);
+			path = Bouquet;
+			sourceTree = "<group>";
+		};
+		83F979DB1957347100AE1A06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				83F979DC1957347100AE1A06 /* Bouquet-Info.plist */,
+				83F979DD1957347100AE1A06 /* InfoPlist.strings */,
+				83F979E01957347100AE1A06 /* main.m */,
+				83F979E21957347100AE1A06 /* Bouquet-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		83F979D01957347100AE1A06 /* Bouquet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83F979FD1957347100AE1A06 /* Build configuration list for PBXNativeTarget "Bouquet" */;
+			buildPhases = (
+				83F979CD1957347100AE1A06 /* Sources */,
+				83F979CE1957347100AE1A06 /* Frameworks */,
+				83F979CF1957347100AE1A06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Bouquet;
+			productName = Bouquet;
+			productReference = 83F979D11957347100AE1A06 /* Bouquet.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83F979C91957347000AE1A06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BQ;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = vasialionia;
+			};
+			buildConfigurationList = 83F979CC1957347000AE1A06 /* Build configuration list for PBXProject "Bouquet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 83F979C81957347000AE1A06;
+			productRefGroup = 83F979D21957347100AE1A06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				83F979D01957347100AE1A06 /* Bouquet */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		83F979CF1957347100AE1A06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F979DF1957347100AE1A06 /* InfoPlist.strings in Resources */,
+				83F979E71957347100AE1A06 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		83F979CD1957347100AE1A06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83F979E11957347100AE1A06 /* main.m in Sources */,
+				83F979E51957347100AE1A06 /* BQAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		83F979DD1957347100AE1A06 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				83F979DE1957347100AE1A06 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		83F979FB1957347100AE1A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		83F979FC1957347100AE1A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		83F979FE1957347100AE1A06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		83F979FF1957347100AE1A06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		83F979CC1957347000AE1A06 /* Build configuration list for PBXProject "Bouquet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F979FB1957347100AE1A06 /* Debug */,
+				83F979FC1957347100AE1A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83F979FD1957347100AE1A06 /* Build configuration list for PBXNativeTarget "Bouquet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83F979FE1957347100AE1A06 /* Debug */,
+				83F979FF1957347100AE1A06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 83F979C91957347000AE1A06 /* Project object */;
+}
