@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "BQWelcomeViewController.h"
+#import "BQComplimentViewController.h"
 
 @interface BQAppDelegate : UIResponder <
     UIApplicationDelegate,
-    BQWelcomeViewControllerDelegate
+    BQWelcomeViewControllerDelegate,
+    BQComplimentViewControllerDelegate
 >
 
 @property (nonatomic, strong) UIWindow *window;

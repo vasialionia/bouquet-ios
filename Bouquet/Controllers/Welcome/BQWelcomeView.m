@@ -7,7 +7,7 @@
 
 #import "BQWelcomeView.h"
 
-@interface BQWelcomeView()
+@interface BQWelcomeView ()
 
 @property (nonatomic, strong, readwrite) UIButton *maleButton;
 @property (nonatomic, strong, readwrite) UIButton *femaleButton;
@@ -68,7 +68,7 @@
 
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
-    if(self) {
+    if (self) {
         self.backgroundColor = [UIColor whiteColor];
 
         [self initMaleButton];

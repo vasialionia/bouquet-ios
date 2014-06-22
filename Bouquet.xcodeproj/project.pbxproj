@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
+		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
+		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
@@ -20,13 +22,17 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentView.m; sourceTree = "<group>"; };
+		2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentViewController.m; sourceTree = "<group>"; };
 		2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeView.h; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
+		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
 		2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BQAppDelegate+Navigation.m"; sourceTree = "<group>"; };
 		2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeView.m; sourceTree = "<group>"; };
 		2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeViewController.h; sourceTree = "<group>"; };
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
+		2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentViewController.h; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -78,8 +84,20 @@
 			isa = PBXGroup;
 			children = (
 				2F2E2865F4615E647B307318 /* Welcome */,
+				2F2E2EC7D400B688E497E111 /* Compliment */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F2E2EC7D400B688E497E111 /* Compliment */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */,
+				2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */,
+				2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */,
+				2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */,
+			);
+			path = Compliment;
 			sourceTree = "<group>";
 		};
 		83F979C81957347000AE1A06 = {
@@ -205,6 +223,8 @@
 				2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */,
 				2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */,
 				2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */,
+				2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */,
+				2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
