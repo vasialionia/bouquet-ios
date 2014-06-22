@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
+		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
+		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -17,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeView.h; sourceTree = "<group>"; };
+		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
+		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
+		2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BQAppDelegate+Navigation.m"; sourceTree = "<group>"; };
+		2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeView.m; sourceTree = "<group>"; };
+		2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeViewController.h; sourceTree = "<group>"; };
+		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,6 +55,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F2E22A592154752C689C6F9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2685C17ED8E666937BA5 /* BQMacro.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2F2E2865F4615E647B307318 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */,
+				2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */,
+				2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */,
+				2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2F2E2E5CD691954D0665C9C8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2865F4615E647B307318 /* Welcome */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		83F979C81957347000AE1A06 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +117,10 @@
 				83F979E41957347100AE1A06 /* BQAppDelegate.m */,
 				83F979E61957347100AE1A06 /* Images.xcassets */,
 				83F979DB1957347100AE1A06 /* Supporting Files */,
+				2F2E2E5CD691954D0665C9C8 /* Controllers */,
+				2F2E22A592154752C689C6F9 /* Common */,
+				2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */,
+				2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */,
 			);
 			path = Bouquet;
 			sourceTree = "<group>";
@@ -161,6 +202,9 @@
 			files = (
 				83F979E11957347100AE1A06 /* main.m in Sources */,
 				83F979E51957347100AE1A06 /* BQAppDelegate.m in Sources */,
+				2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */,
+				2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */,
+				2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +337,7 @@
 				83F979FF1957347100AE1A06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

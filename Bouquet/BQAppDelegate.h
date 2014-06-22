@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BQWelcomeViewController.h"
 
 @interface BQAppDelegate : UIResponder <
-    UIApplicationDelegate
+    UIApplicationDelegate,
+    BQWelcomeViewControllerDelegate
 >
 
-@property(nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong) UIWindow *window;
 
 @end
