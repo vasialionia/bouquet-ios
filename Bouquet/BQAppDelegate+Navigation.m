@@ -17,6 +17,13 @@
     return complimentViewController;
 }
 
+- (UINavigationController *)createSettingsViewController {
+    BQSettingsViewController *settingsViewController = [[BQSettingsViewController alloc] init];
+    settingsViewController.delegate = self;
+    UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
+    return settingsNavigationController;
+}
+
 #pragma mark BQWelcomeViewControllerDelegate protocol
 
 - (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSexMode:(BQWelcomeViewControllerSexMode)sexMode {
@@ -26,7 +33,17 @@
 #pragma mark BQComplimentViewControllerDelegate protocol
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController {
-    NSLog(@"%s %s:%d", __PRETTY_FUNCTION__, __FILE__, __LINE__);
+    self.window.rootViewController = [self createSettingsViewController];
+}
+
+#pragma mark BQSettingsViewControllerDelegate protocol
+
+- (void)settingsViewControllerDidTapDone:(BQSettingsViewController *)settingsViewController {
+    self.window.rootViewController = [self createComplimentViewController];
+}
+
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
+    [(UINavigationController *)self.window.rootViewController pushViewController:[[UIViewController alloc] init] animated:YES];
 }
 
 #pragma mark Interface methods

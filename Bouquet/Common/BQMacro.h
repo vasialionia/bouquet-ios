@@ -6,3 +6,4 @@
 //
 
 #define BQAssert NSAssert
+#define BQParameterAssert NSParameterAssert
