@@ -7,3 +7,5 @@
 
 #define BQAssert NSAssert
 #define BQParameterAssert NSParameterAssert
+
+#define BQLogError NSLog
