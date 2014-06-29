@@ -32,6 +32,15 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
     return [RKApplicationDataDirectory() stringByAppendingPathComponent:@"bouquet.sqlite"];
 }
 
+- (void)initDatabaseBackupIfNeeded {
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self mainStorePath]]) {
+        NSError *error = nil;
+        if (![[NSFileManager defaultManager] copyItemAtPath:[[NSBundle mainBundle] pathForResource:@"bouquet" ofType:@"sqlite_backup"] toPath:[self mainStorePath] error:&error]) {
+            BQLogError(@"Can't copy database backup. %@", error);
+        }
+    }
+}
+
 - (void)initManagedObjectStore {
     NSManagedObjectModel *managedObjectModel = [NSManagedObjectModel mergedModelFromBundles:nil];
     RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
@@ -138,6 +147,7 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
 
         self.requestSerializationMIMEType = RKMIMETypeJSON;
 
+        [self initDatabaseBackupIfNeeded];
         [self initManagedObjectStore];
         [self initMappingParameters];
         [self initLangKey];

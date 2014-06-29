@@ -40,13 +40,11 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
 
 #pragma mark BQNotificationsDataSource protocol
 
-- (BOOL)isNotificationsEnabled
-{
+- (BOOL)isNotificationsEnabled {
     return [UIApplication sharedApplication].scheduledLocalNotifications.count > 0;
 }
 
-- (void)setNotificationsEnabled:(BOOL)notificationsEnabled
-{
+- (void)setNotificationsEnabled:(BOOL)notificationsEnabled {
     if (self.notificationsEnabled == notificationsEnabled) {
         return;
     }

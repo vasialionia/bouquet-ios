@@ -27,8 +27,6 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
-    [[UIApplication sharedApplication] cancelAllLocalNotifications];
-
     [BQNotificationsManager sharedManager].complimentDatasource = objectManager;
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];

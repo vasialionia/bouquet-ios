@@ -12,6 +12,7 @@
 		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
 		2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */; };
 		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
+		2F2E27AB61103973DB8CE775 /* bouquet.sqlite_backup in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */; };
 		2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
 		2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E25E348092194C9924A41 /* BQSettingsViewController.m */; };
@@ -90,6 +91,7 @@
 		2F2E247BDD5E10DBF5C1618F /* BQComplimentDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentDatasource.h; sourceTree = "<group>"; };
 		2F2E25E348092194C9924A41 /* BQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSettingsViewController.m; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
+		2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */ = {isa = PBXFileReference; lastKnownFileType = file.sqlite; path = bouquet.sqlite_backup; sourceTree = "<group>"; };
 		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSegmentedControl.m; sourceTree = "<group>"; };
 		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				2F2E25E6B49D840C633B5D95 /* Resources */,
 				83F979DB1957347100AE1A06 /* Supporting Files */,
 				83F979E61957347100AE1A06 /* Images.xcassets */,
+				2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */,
 			);
 			path = Bouquet;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				83F979DF1957347100AE1A06 /* InfoPlist.strings in Resources */,
 				83F979E71957347100AE1A06 /* Images.xcassets in Resources */,
 				2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */,
+				2F2E27AB61103973DB8CE775 /* bouquet.sqlite_backup in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
