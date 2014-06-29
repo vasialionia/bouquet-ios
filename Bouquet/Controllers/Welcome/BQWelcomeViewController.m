@@ -14,18 +14,23 @@
 #pragma mark Private methods
 
 - (void)onButtonTap:(UIButton *)button {
+    BQSex sex;
+
     if (button == self.view.maleButton) {
-        [self.delegate welcomeViewController:self didSelectSexMode:BQWelcomeViewControllerSexModeMale];
+        sex = BQSexMale;
     }
     else if (button == self.view.femaleButton) {
-        [self.delegate welcomeViewController:self didSelectSexMode:BQWelcomeViewControllerSexModeFemale];
+        sex = BQSexFemale;
     }
     else if (button == self.view.otherButton) {
-        [self.delegate welcomeViewController:self didSelectSexMode:BQWelcomeViewControllerSexModeOther];
+        sex = BQSexOther;
     }
     else {
-        BQAssert(NO, @"Unknown button tapped!");
+        BQAssert(NO, @"Unknown button tapped.");
+        sex = BQSexMale;
     }
+
+    [self.delegate welcomeViewController:self didSelectSex:sex];
 }
 
 #pragma mark UIViewController methods

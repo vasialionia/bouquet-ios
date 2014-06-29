@@ -7,6 +7,9 @@
 
 #import "BQComplimentViewController.h"
 #import "BQComplimentView.h"
+#import "BQObjectManager.h"
+#import "BQCompliment.h"
+#import "BQComplimentDataSource.h"
 
 @implementation BQComplimentViewController
 
@@ -17,7 +20,7 @@
 }
 
 - (void)onComplimentTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    NSLog(@"%s %s:%d", __PRETTY_FUNCTION__, __FILE__, __LINE__);
+    self.view.complimentLabel.text = [self.datasource getRandCompliment].text;
 }
 
 #pragma mark UIViewController methods
@@ -33,7 +36,7 @@
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onComplimentTap:)]];
     [self.view.infoButton addTarget:self action:@selector(onInfoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 
-    self.view.complimentLabel.text = @"Copyright (c) 2014 vasialionia. All rights reserved. Copyright (c) 2014 vasialionia. All rights reserved. Copyright (c) 2014 vasialionia. All rights reserved.";
+    self.view.complimentLabel.text = [self.datasource getRandCompliment].text;
 }
 
 @end

@@ -6,6 +6,7 @@
 //
 
 #import "BQAppDelegate+Navigation.h"
+#import "BQObjectManager.h"
 
 @implementation BQAppDelegate (Navigation)
 
@@ -14,19 +15,22 @@
 - (UIViewController *)createComplimentViewController {
     BQComplimentViewController *complimentViewController = [[BQComplimentViewController alloc] init];
     complimentViewController.delegate = self;
+    complimentViewController.datasource = [BQObjectManager sharedManager];
     return complimentViewController;
 }
 
 - (UINavigationController *)createSettingsViewController {
     BQSettingsViewController *settingsViewController = [[BQSettingsViewController alloc] init];
     settingsViewController.delegate = self;
+    settingsViewController.datasource = [BQObjectManager sharedManager];
     UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
     return settingsNavigationController;
 }
 
 #pragma mark BQWelcomeViewControllerDelegate protocol
 
-- (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSexMode:(BQWelcomeViewControllerSexMode)sexMode {
+- (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSex:(BQSex)sex {
+    [BQObjectManager sharedManager].sex = sex;
     self.window.rootViewController = [self createComplimentViewController];
 }
 

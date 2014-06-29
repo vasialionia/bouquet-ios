@@ -9,14 +9,15 @@
 /* Begin PBXBuildFile section */
 		2F2E203894049E337956AEA1 /* BQTableViewCellWithSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */; };
 		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
-		2F2E21A82777FA2830C652D1 /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E27DDFB41856F3A22F9DE /* BQObjectManager.m */; };
 		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
 		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
 		2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E25E348092194C9924A41 /* BQSettingsViewController.m */; };
 		2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */; };
 		2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */; };
+		2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29AA8852751293D04F9E /* BQObjectManager.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
+		2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2436CE6E767F2F23E78D /* BQCompliment.m */; };
 		831B5184196048B50035BE47 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B517B196048190035BE47 /* libRestKit.a */; };
 		831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5185196048B50035BE47 /* CFNetwork.framework */; };
 		831B518B196048B50035BE47 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5186196048B50035BE47 /* CoreData.framework */; };
@@ -24,7 +25,6 @@
 		831B518D196048B50035BE47 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5188196048B50035BE47 /* Security.framework */; };
 		831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5189196048B50035BE47 /* SystemConfiguration.framework */; };
 		831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */; };
-		831B519919604D080035BE47 /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 831B519819604D080035BE47 /* BQCompliment.m */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -79,20 +79,25 @@
 		2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentViewController.m; sourceTree = "<group>"; };
 		2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BQ.m"; sourceTree = "<group>"; };
 		2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeView.h; sourceTree = "<group>"; };
+		2F2E2436CE6E767F2F23E78D /* BQCompliment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCompliment.m; sourceTree = "<group>"; };
+		2F2E244B4E944658F221567C /* BQCompliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCompliment.h; sourceTree = "<group>"; };
+		2F2E247BDD5E10DBF5C1618F /* BQComplimentDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentDataSource.h; sourceTree = "<group>"; };
 		2F2E25E348092194C9924A41 /* BQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSettingsViewController.m; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
-		2F2E27DDFB41856F3A22F9DE /* BQObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQObjectManager.m; sourceTree = "<group>"; };
-		2F2E27E15559B19588231378 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
 		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSegmentedControl.m; sourceTree = "<group>"; };
 		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
 		2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BQAppDelegate+Navigation.m"; sourceTree = "<group>"; };
+		2F2E29812DA04162D3F3D2B4 /* BQSettingsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsDataSource.h; sourceTree = "<group>"; };
+		2F2E29AA8852751293D04F9E /* BQObjectManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQObjectManager.m; sourceTree = "<group>"; };
 		2F2E29BEB2852E38CE083BC8 /* BQTableViewCellWithSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSwitch.h; sourceTree = "<group>"; };
 		2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeView.m; sourceTree = "<group>"; };
 		2F2E2B0778FFC37DA2A46C46 /* BQTableViewCellWithSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSegmentedControl.h; sourceTree = "<group>"; };
 		2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeViewController.h; sourceTree = "<group>"; };
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
+		2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
 		2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentViewController.h; sourceTree = "<group>"; };
+		2F2E2CB60EC71AA89E0A742E /* BQSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSex.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
 		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		831B5185196048B50035BE47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
@@ -101,8 +106,6 @@
 		831B5188196048B50035BE47 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		831B5189196048B50035BE47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		831B519419604B9F0035BE47 /* bouquet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bouquet.xcdatamodel; sourceTree = "<group>"; };
-		831B519719604D080035BE47 /* BQCompliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCompliment.h; sourceTree = "<group>"; };
-		831B519819604D080035BE47 /* BQCompliment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCompliment.m; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,6 +177,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		2F2E2790F9D1CADCE30888EC /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E244B4E944658F221567C /* BQCompliment.h */,
+				2F2E2436CE6E767F2F23E78D /* BQCompliment.m */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		2F2E2865F4615E647B307318 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,6 +195,19 @@
 				2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		2F2E2CD75B276BC105A22085 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2790F9D1CADCE30888EC /* Entities */,
+				2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */,
+				2F2E29AA8852751293D04F9E /* BQObjectManager.m */,
+				2F2E247BDD5E10DBF5C1618F /* BQComplimentDataSource.h */,
+				2F2E2CB60EC71AA89E0A742E /* BQSex.h */,
+				2F2E29812DA04162D3F3D2B4 /* BQSettingsDataSource.h */,
+			);
+			path = Logic;
 			sourceTree = "<group>";
 		};
 		2F2E2E5CD691954D0665C9C8 /* Controllers */ = {
@@ -233,15 +258,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		831B519619604CAD0035BE47 /* Entities */ = {
-			isa = PBXGroup;
-			children = (
-				831B519719604D080035BE47 /* BQCompliment.h */,
-				831B519819604D080035BE47 /* BQCompliment.m */,
-			);
-			path = Entities;
-			sourceTree = "<group>";
-		};
 		83F979C81957347000AE1A06 = {
 			isa = PBXGroup;
 			children = (
@@ -281,15 +297,13 @@
 			children = (
 				2F2E22A592154752C689C6F9 /* Common */,
 				2F2E27312577718150E3D4A4 /* Extensions */,
-				831B519619604CAD0035BE47 /* Entities */,
+				2F2E2CD75B276BC105A22085 /* Logic */,
 				2F2E2402CD65BB6224D87539 /* Cells */,
 				2F2E2E5CD691954D0665C9C8 /* Controllers */,
 				83F979E31957347100AE1A06 /* BQAppDelegate.h */,
 				83F979E41957347100AE1A06 /* BQAppDelegate.m */,
 				2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */,
 				2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */,
-				2F2E27E15559B19588231378 /* BQObjectManager.h */,
-				2F2E27DDFB41856F3A22F9DE /* BQObjectManager.m */,
 				831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */,
 				83F979DB1957347100AE1A06 /* Supporting Files */,
 				83F979E61957347100AE1A06 /* Images.xcassets */,
@@ -413,7 +427,6 @@
 				83F979E11957347100AE1A06 /* main.m in Sources */,
 				83F979E51957347100AE1A06 /* BQAppDelegate.m in Sources */,
 				2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */,
-				831B519919604D080035BE47 /* BQCompliment.m in Sources */,
 				2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */,
 				2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */,
 				2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */,
@@ -423,7 +436,8 @@
 				831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */,
 				2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */,
 				2F2E203894049E337956AEA1 /* BQTableViewCellWithSegmentedControl.m in Sources */,
-				2F2E21A82777FA2830C652D1 /* BQObjectManager.m in Sources */,
+				2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */,
+				2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

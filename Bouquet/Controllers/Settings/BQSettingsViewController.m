@@ -9,6 +9,7 @@
 #import "BQTableViewCellWithSwitch.h"
 #import "UITableView+BQ.h"
 #import "BQTableViewCellWithSegmentedControl.h"
+#import "BQSettingsDataSource.h"
 
 typedef NS_ENUM(NSUInteger, BQSettingsTableSections) {
     BQSettingsTableSectionsSettings,
@@ -33,6 +34,24 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 
 - (void)onDoneTap:(id)sender {
     [self.delegate settingsViewControllerDidTapDone:self];
+}
+
+- (void)onSegmentedControlValueChanged:(UISegmentedControl *)segmentedControl {
+    self.datasource.sex = (BQSex)segmentedControl.selectedSegmentIndex;
+}
+
+- (NSString *)getSexTitleForSex:(BQSex)sex {
+    switch (sex) {
+        case BQSexMale:
+            return @"♂";
+        case BQSexFemale:
+            return @"♀";
+        case BQSexOther:
+            return @"?";
+        default:
+            BQAssert(NO, @"Unknown sex key. %d", (int)sex);
+            return @"?";
+    }
 }
 
 #pragma mark NSObject methods
@@ -96,9 +115,21 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                 case BQSettingsTableSectionSettingsRowsSex: {
                     BQTableViewCellWithSegmentedControl *cell = (BQTableViewCellWithSegmentedControl *)[tableView cellOfClass:[BQTableViewCellWithSegmentedControl class]];
                     cell.textLabel.text = @"Sex";
+
                     [cell.segmentedControl removeAllSegments];
-                    [cell.segmentedControl insertSegmentWithTitle:@"♂" atIndex:0 animated:NO];
-                    [cell.segmentedControl insertSegmentWithTitle:@"♀" atIndex:0 animated:NO];
+                    NSUInteger indexToInsert = 0;
+                    for (BQSex sex = BQSexFirst; sex <= BQSexLast; sex ++) {
+                        [cell.segmentedControl insertSegmentWithTitle:[self getSexTitleForSex:sex] atIndex:indexToInsert animated:NO];
+                        [cell.segmentedControl setWidth:40.0f forSegmentAtIndex:indexToInsert];
+                        indexToInsert ++;
+                    }
+
+                    cell.segmentedControl.selectedSegmentIndex = [self.datasource sex];
+
+                    if (![cell.segmentedControl.allTargets containsObject:self]) {
+                        [cell.segmentedControl addTarget:self action:@selector(onSegmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+                    }
+
                     return cell;
                 }
                 case BQSettingsTableSectionSettingsRowsNotifications: {

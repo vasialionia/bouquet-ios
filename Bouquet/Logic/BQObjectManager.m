@@ -114,6 +114,20 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
     return langKeys;
 }
 
+- (NSString *)getSexKey {
+    switch (self.sex) {
+        case BQSexMale:
+            return @"m";
+        case BQSexFemale:
+            return @"f";
+        case BQSexOther:
+            return @"fm";
+        default:
+            BQAssert(NO, @"Unknown sex key. %d", (int)self.sex);
+            return @"fm";
+    }
+}
+
 #pragma mark RKObjectManager methods
 
 - (id)initWithHTTPClient:(AFHTTPClient *)client {
@@ -151,16 +165,22 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
     }];
 }
 
+#pragma mark BQComplimentDataSource protocol
+
 - (BQCompliment *)getRandCompliment {
     NSEntityDescription *complimentEntityDescription = [NSEntityDescription entityForName:@"Compliment" inManagedObjectContext:self.managedObjectStore.mainQueueManagedObjectContext];
     NSFetchRequest *complimentFetchRequest = [[NSFetchRequest alloc] init];
     complimentFetchRequest.entity = complimentEntityDescription;
-    complimentFetchRequest.predicate = [NSPredicate predicateWithFormat:@"langKey == %@", self.langKey];
+    complimentFetchRequest.predicate = [NSPredicate predicateWithFormat:@"langKey == %@ && sexKeys CONTAINS[c] %@", self.langKey, [self getSexKey]];
 
     NSError *error = nil;
     NSUInteger complimentsCount = [self.managedObjectStore.mainQueueManagedObjectContext countForEntityForName:complimentFetchRequest.entity.name predicate:complimentFetchRequest.predicate error:&error];
     if (error != nil) {
         BQLogError(@"Can't fetch compliments count. %@", error);
+        return nil;
+    }
+    if (complimentsCount == 0) {
+        BQLogError(@"Don't have enough compliments.");
         return nil;
     }
 
@@ -183,6 +203,7 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
     }
 
     self.prevRandComplimentId = compliment.complimentId;
+    NSLog(@"%@", compliment.sexKeys);
 
     return compliment;
 }

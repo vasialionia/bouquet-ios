@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef NS_ENUM(NSUInteger, BQWelcomeViewControllerSexMode) {
-    BQWelcomeViewControllerSexModeMale,
-    BQWelcomeViewControllerSexModeFemale,
-    BQWelcomeViewControllerSexModeOther
-};
+#import "BQSex.h"
 
 @class BQWelcomeView;
 @protocol BQWelcomeViewControllerDelegate;
@@ -28,6 +23,6 @@ typedef NS_ENUM(NSUInteger, BQWelcomeViewControllerSexMode) {
 
 @required
 
-- (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSexMode:(BQWelcomeViewControllerSexMode)sexMode;
+- (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSex:(BQSex)sex;
 
 @end

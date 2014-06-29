@@ -21,7 +21,6 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
     RKLogConfigureByName("RestKit/*", RKLogLevelWarning);
     BQObjectManager *objectManager = [BQObjectManager managerWithBaseURL:[NSURL URLWithString:BQBaseAPIURLString]];
     [BQObjectManager setSharedManager:objectManager];
-    [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
@@ -30,6 +29,10 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
     [self.window makeKeyAndVisible];
 
     return YES;
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
 }
 
 @end
