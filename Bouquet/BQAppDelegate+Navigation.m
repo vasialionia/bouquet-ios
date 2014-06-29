@@ -9,6 +9,8 @@
 #import "BQObjectManager.h"
 #import "BQLicenseViewController.h"
 
+static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
+
 @implementation BQAppDelegate (Navigation)
 
 #pragma mark Private methods
@@ -45,18 +47,21 @@
 - (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSex:(BQSex)sex {
     [BQObjectManager sharedManager].sex = sex;
     self.window.rootViewController = [self createComplimentViewController];
+    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
 #pragma mark BQComplimentViewControllerDelegate protocol
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController {
     self.window.rootViewController = [self createSettingsViewController];
+    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
 #pragma mark BQSettingsViewControllerDelegate protocol
 
 - (void)settingsViewControllerDidTapDone:(BQSettingsViewController *)settingsViewController {
     self.window.rootViewController = [self createComplimentViewController];
+    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
