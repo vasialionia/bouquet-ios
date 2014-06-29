@@ -203,7 +203,6 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
     }
 
     self.prevRandComplimentId = compliment.complimentId;
-    NSLog(@"%@", compliment.sexKeys);
 
     return compliment;
 }

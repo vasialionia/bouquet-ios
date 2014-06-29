@@ -11,8 +11,10 @@
 		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
 		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
 		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
+		2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
 		2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E25E348092194C9924A41 /* BQSettingsViewController.m */; };
+		2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2C05161290FE84F90203 /* RestKitLicense */; };
 		2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */; };
 		2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */; };
 		2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29AA8852751293D04F9E /* BQObjectManager.m */; };
@@ -25,6 +27,7 @@
 		831B518D196048B50035BE47 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5188196048B50035BE47 /* Security.framework */; };
 		831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5189196048B50035BE47 /* SystemConfiguration.framework */; };
 		831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */; };
+		831B51AA196076980035BE47 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 831B51A9196076980035BE47 /* LICENSE */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -75,6 +78,7 @@
 /* Begin PBXFileReference section */
 		2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BQ.h"; sourceTree = "<group>"; };
 		2F2E20E90C4349A5AA496954 /* BQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsViewController.h; sourceTree = "<group>"; };
+		2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLicenseViewController.m; sourceTree = "<group>"; };
 		2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentView.m; sourceTree = "<group>"; };
 		2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentViewController.m; sourceTree = "<group>"; };
 		2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BQ.m"; sourceTree = "<group>"; };
@@ -97,8 +101,10 @@
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
 		2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
 		2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentViewController.h; sourceTree = "<group>"; };
+		2F2E2C05161290FE84F90203 /* RestKitLicense */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RestKitLicense; sourceTree = "<group>"; };
 		2F2E2CB60EC71AA89E0A742E /* BQSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSex.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
+		2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLicenseViewController.h; sourceTree = "<group>"; };
 		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		831B5185196048B50035BE47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		831B5186196048B50035BE47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,7 @@
 		831B5188196048B50035BE47 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		831B5189196048B50035BE47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		831B519419604B9F0035BE47 /* bouquet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bouquet.xcdatamodel; sourceTree = "<group>"; };
+		831B51A9196076980035BE47 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = Submodules/RestKit/LICENSE; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -168,6 +175,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		2F2E25E6B49D840C633B5D95 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2C05161290FE84F90203 /* RestKitLicense */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		2F2E27312577718150E3D4A4 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +199,15 @@
 				2F2E2436CE6E767F2F23E78D /* BQCompliment.m */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		2F2E280A1B9059BE40B69833 /* Lincense */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */,
+				2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */,
+			);
+			path = Lincense;
 			sourceTree = "<group>";
 		};
 		2F2E2865F4615E647B307318 /* Welcome */ = {
@@ -216,6 +240,7 @@
 				2F2E2865F4615E647B307318 /* Welcome */,
 				2F2E2EC7D400B688E497E111 /* Compliment */,
 				2F2E23B70FEBD307D0A3FF93 /* Settings */,
+				2F2E280A1B9059BE40B69833 /* Lincense */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -242,6 +267,7 @@
 		831B5172196047DF0035BE47 /* RestKit */ = {
 			isa = PBXGroup;
 			children = (
+				831B51A9196076980035BE47 /* LICENSE */,
 				831B5173196048190035BE47 /* RestKit.xcodeproj */,
 			);
 			name = RestKit;
@@ -305,6 +331,7 @@
 				2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */,
 				2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */,
 				831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */,
+				2F2E25E6B49D840C633B5D95 /* Resources */,
 				83F979DB1957347100AE1A06 /* Supporting Files */,
 				83F979E61957347100AE1A06 /* Images.xcassets */,
 			);
@@ -412,8 +439,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831B51AA196076980035BE47 /* LICENSE in Resources */,
 				83F979DF1957347100AE1A06 /* InfoPlist.strings in Resources */,
 				83F979E71957347100AE1A06 /* Images.xcassets in Resources */,
+				2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +467,7 @@
 				2F2E203894049E337956AEA1 /* BQTableViewCellWithSegmentedControl.m in Sources */,
 				2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */,
 				2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */,
+				2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

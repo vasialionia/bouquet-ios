@@ -7,6 +7,7 @@
 
 #import "BQAppDelegate+Navigation.h"
 #import "BQObjectManager.h"
+#import "BQLicenseViewController.h"
 
 @implementation BQAppDelegate (Navigation)
 
@@ -25,6 +26,18 @@
     settingsViewController.datasource = [BQObjectManager sharedManager];
     UINavigationController *settingsNavigationController = [[UINavigationController alloc] initWithRootViewController:settingsViewController];
     return settingsNavigationController;
+}
+
+- (UIViewController *)createLicenseViewControllerWithLicensePath:(NSString *)path {
+    NSError *error = nil;
+    NSString *license = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
+    if (error) {
+        BQLogError(@"Can't read file at path: %@. %@", path, error);
+    }
+
+    BQLicenseViewController *licenseViewController = [[BQLicenseViewController alloc] init];
+    licenseViewController.licenseText = license;
+    return licenseViewController;
 }
 
 #pragma mark BQWelcomeViewControllerDelegate protocol
@@ -47,7 +60,10 @@
 }
 
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
-    [(UINavigationController *)self.window.rootViewController pushViewController:[[UIViewController alloc] init] animated:YES];
+    NSString *licensePath = [[NSBundle mainBundle] pathForResource:@"RestKitLicense" ofType:nil];
+    UIViewController *licenseViewController = [self createLicenseViewControllerWithLicensePath:licensePath];
+    licenseViewController.title = @"RestKit License";
+    [(UINavigationController *)self.window.rootViewController pushViewController:licenseViewController animated:YES];
 }
 
 #pragma mark Interface methods
