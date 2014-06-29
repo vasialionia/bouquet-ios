@@ -21,16 +21,13 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
     RKLogConfigureByName("RestKit/*", RKLogLevelWarning);
     BQObjectManager *objectManager = [BQObjectManager managerWithBaseURL:[NSURL URLWithString:BQBaseAPIURLString]];
     [BQObjectManager setSharedManager:objectManager];
+    [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [self createRootViewController];
     [self.window makeKeyAndVisible];
-
-    [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:^(BOOL isSuccess, NSDictionary *info) {
-        NSLog(@"%s %s:%d", __PRETTY_FUNCTION__, __FILE__, __LINE__);
-    }];
 
     return YES;
 }

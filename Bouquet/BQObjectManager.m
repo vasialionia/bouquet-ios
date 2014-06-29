@@ -9,9 +9,19 @@
 #import <CoreData/CoreData.h>
 #import <RestKit/RestKit.h>
 #import "BQObjectManager.h"
+#import "BQCompliment.h"
 
 NSString *const BQObjectManagerCompletionBlockKeyResponse = @"BQObjectManagerCompletionBlockKeyResponse";
 NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerCompletionBlockKeyError";
+
+static NSString *const BQObjectManagerDefaultLangKey = @"en";
+
+@interface BQObjectManager ()
+
+@property (nonatomic, strong) NSNumber *prevRandComplimentId;
+@property (nonatomic, strong) NSString *langKey;
+
+@end
 
 @implementation BQObjectManager
 
@@ -36,7 +46,7 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
             NSInferMappingModelAutomaticallyOption: @YES
     };
     NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:path fromSeedDatabaseAtPath:nil withConfiguration:nil options:options error:&error];
-    if (!persistentStore) {
+    if (persistentStore == nil) {
         BQLogError(@"Failed adding persistent store at path '%@': %@", path, error);
     }
     [managedObjectStore createManagedObjectContexts];
@@ -67,6 +77,43 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
     }];
 }
 
+- (void)initLangKey {
+    NSArray *preferredLangKeys = [NSLocale preferredLanguages];
+    NSSet *supportedLangKeys = [self getSupportedLangKeys];
+
+    NSString *langKey = BQObjectManagerDefaultLangKey;
+    for (NSString *key in preferredLangKeys) {
+        if ([supportedLangKeys containsObject:key]) {
+            langKey = key;
+            break;
+        }
+    }
+
+    self.langKey = langKey;
+}
+
+- (NSSet *)getSupportedLangKeys {
+    NSEntityDescription *complimentEntityDescription = [NSEntityDescription entityForName:@"Compliment" inManagedObjectContext:self.managedObjectStore.mainQueueManagedObjectContext];
+    NSFetchRequest *langFetchRequest = [[NSFetchRequest alloc] init];
+    langFetchRequest.entity = complimentEntityDescription;
+    langFetchRequest.propertiesToFetch = @[[[complimentEntityDescription propertiesByName] objectForKey:@"langKey"]];
+    langFetchRequest.returnsDistinctResults = YES;
+    langFetchRequest.resultType = NSDictionaryResultType;
+
+    NSError *error = nil;
+    NSArray *langProperties = [self.managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:langFetchRequest error:&error];
+    if (error != nil) {
+        BQLogError(@"Error while getting language keys. %@", error);
+    }
+
+    NSMutableSet *langKeys = [NSMutableSet setWithCapacity:langProperties.count];
+    for (NSDictionary *langProperty in langProperties) {
+        [langKeys addObject:langProperty[@"langKey"]];
+    }
+
+    return langKeys;
+}
+
 #pragma mark RKObjectManager methods
 
 - (id)initWithHTTPClient:(AFHTTPClient *)client {
@@ -76,6 +123,7 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
 
         [self initManagedObjectStore];
         [self initMappingParameters];
+        [self initLangKey];
     }
     return self;
 }
@@ -84,7 +132,9 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
 
 - (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock {
     [self getObject:nil path:@"compliment" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        if (completionBlock) {
+        [self initLangKey];
+
+        if (completionBlock != nil) {
             completionBlock(YES, @{
                     BQObjectManagerCompletionBlockKeyResponse: mappingResult.array
             });
@@ -93,12 +143,48 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
     failure:^(RKObjectRequestOperation *operation, NSError *error) {
         BQLogError(@"Error while getting compliments. %@", error);
 
-        if (completionBlock) {
+        if (completionBlock != nil) {
             completionBlock(YES, @{
                     BQObjectManagerCompletionBlockKeyError: error
             });
         }
     }];
+}
+
+- (BQCompliment *)getRandCompliment {
+    NSEntityDescription *complimentEntityDescription = [NSEntityDescription entityForName:@"Compliment" inManagedObjectContext:self.managedObjectStore.mainQueueManagedObjectContext];
+    NSFetchRequest *complimentFetchRequest = [[NSFetchRequest alloc] init];
+    complimentFetchRequest.entity = complimentEntityDescription;
+    complimentFetchRequest.predicate = [NSPredicate predicateWithFormat:@"langKey == %@", self.langKey];
+
+    NSError *error = nil;
+    NSUInteger complimentsCount = [self.managedObjectStore.mainQueueManagedObjectContext countForEntityForName:complimentFetchRequest.entity.name predicate:complimentFetchRequest.predicate error:&error];
+    if (error != nil) {
+        BQLogError(@"Can't fetch compliments count. %@", error);
+        return nil;
+    }
+
+    complimentFetchRequest.fetchLimit = 1;
+    complimentFetchRequest.fetchOffset = arc4random() % complimentsCount;
+
+    NSArray *compliments = [self.managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:complimentFetchRequest error:&error];
+    if (error != nil) {
+        BQLogError(@"Can't fetch compliments. %@", error);
+        return nil;
+    }
+    if (compliments.count != 1) {
+        BQAssert(NO, @"Can't fetch exactly 1 compliment.");
+        return nil;
+    }
+
+    BQCompliment *compliment = compliments.firstObject;
+    if ([self.prevRandComplimentId isEqualToNumber:compliment.complimentId] && complimentsCount > 1) {
+        return [self getRandCompliment];
+    }
+
+    self.prevRandComplimentId = compliment.complimentId;
+
+    return compliment;
 }
 
 @end

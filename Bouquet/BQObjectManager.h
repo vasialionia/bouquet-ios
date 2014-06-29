@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import <RestKit/RKObjectManager.h>
 
+@class BQCompliment;
+
 extern NSString *const BQObjectManagerCompletionBlockKeyResponse;
 extern NSString *const BQObjectManagerCompletionBlockKeyError;
 
@@ -16,5 +18,6 @@ typedef void (^BQObjectManagerCompletionBlock)(BOOL isSuccess, NSDictionary *inf
 @interface BQObjectManager : RKObjectManager
 
 - (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock;
+- (BQCompliment *)getRandCompliment;
 
 @end
