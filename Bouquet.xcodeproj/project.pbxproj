@@ -16,6 +16,12 @@
 		2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */; };
 		2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
+		831B5184196048B50035BE47 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B517B196048190035BE47 /* libRestKit.a */; };
+		831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5185196048B50035BE47 /* CFNetwork.framework */; };
+		831B518B196048B50035BE47 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5186196048B50035BE47 /* CoreData.framework */; };
+		831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5187196048B50035BE47 /* MobileCoreServices.framework */; };
+		831B518D196048B50035BE47 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5188196048B50035BE47 /* Security.framework */; };
+		831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5189196048B50035BE47 /* SystemConfiguration.framework */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -24,6 +30,44 @@
 		83F979E51957347100AE1A06 /* BQAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F979E41957347100AE1A06 /* BQAppDelegate.m */; };
 		83F979E71957347100AE1A06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83F979E61957347100AE1A06 /* Images.xcassets */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		831B517A196048190035BE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D1614564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+		831B517C196048190035BE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160D2614564E820060A5C5;
+			remoteInfo = RestKitTests;
+		};
+		831B517E196048190035BE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E62145651060060A5C5;
+			remoteInfo = RestKitFramework;
+		};
+		831B5180196048190035BE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 25160E78145651060060A5C5;
+			remoteInfo = RestKitFrameworkTests;
+		};
+		831B5182196048900035BE47 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 25160D1514564E810060A5C5;
+			remoteInfo = RestKit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BQ.h"; sourceTree = "<group>"; };
@@ -45,6 +89,12 @@
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
 		2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentViewController.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
+		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
+		831B5185196048B50035BE47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		831B5186196048B50035BE47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		831B5187196048B50035BE47 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		831B5188196048B50035BE47 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		831B5189196048B50035BE47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -64,6 +114,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
+				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
+				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
+				831B518D196048B50035BE47 /* Security.framework in Frameworks */,
+				831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */,
+				831B5184196048B50035BE47 /* libRestKit.a in Frameworks */,
 				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
 				83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */,
 				83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */,
@@ -142,9 +198,37 @@
 			path = Compliment;
 			sourceTree = "<group>";
 		};
+		831B5171196047D80035BE47 /* Submodules */ = {
+			isa = PBXGroup;
+			children = (
+				831B5172196047DF0035BE47 /* RestKit */,
+			);
+			name = Submodules;
+			sourceTree = "<group>";
+		};
+		831B5172196047DF0035BE47 /* RestKit */ = {
+			isa = PBXGroup;
+			children = (
+				831B5173196048190035BE47 /* RestKit.xcodeproj */,
+			);
+			name = RestKit;
+			sourceTree = "<group>";
+		};
+		831B5174196048190035BE47 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				831B517B196048190035BE47 /* libRestKit.a */,
+				831B517D196048190035BE47 /* RestKitTests.octest */,
+				831B517F196048190035BE47 /* RestKit.framework */,
+				831B5181196048190035BE47 /* RestKitFrameworkTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		83F979C81957347000AE1A06 = {
 			isa = PBXGroup;
 			children = (
+				831B5171196047D80035BE47 /* Submodules */,
 				83F979DA1957347100AE1A06 /* Bouquet */,
 				83F979D31957347100AE1A06 /* Frameworks */,
 				83F979D21957347100AE1A06 /* Products */,
@@ -162,6 +246,11 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				831B5185196048B50035BE47 /* CFNetwork.framework */,
+				831B5186196048B50035BE47 /* CoreData.framework */,
+				831B5187196048B50035BE47 /* MobileCoreServices.framework */,
+				831B5188196048B50035BE47 /* Security.framework */,
+				831B5189196048B50035BE47 /* SystemConfiguration.framework */,
 				83F979D41957347100AE1A06 /* Foundation.framework */,
 				83F979D61957347100AE1A06 /* CoreGraphics.framework */,
 				83F979D81957347100AE1A06 /* UIKit.framework */,
@@ -212,6 +301,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				831B5183196048900035BE47 /* PBXTargetDependency */,
 			);
 			name = Bouquet;
 			productName = Bouquet;
@@ -238,12 +328,49 @@
 			mainGroup = 83F979C81957347000AE1A06;
 			productRefGroup = 83F979D21957347100AE1A06 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 831B5174196048190035BE47 /* Products */;
+					ProjectRef = 831B5173196048190035BE47 /* RestKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				83F979D01957347100AE1A06 /* Bouquet */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		831B517B196048190035BE47 /* libRestKit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRestKit.a;
+			remoteRef = 831B517A196048190035BE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		831B517D196048190035BE47 /* RestKitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitTests.octest;
+			remoteRef = 831B517C196048190035BE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		831B517F196048190035BE47 /* RestKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RestKit.framework;
+			remoteRef = 831B517E196048190035BE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		831B5181196048190035BE47 /* RestKitFrameworkTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = RestKitFrameworkTests.octest;
+			remoteRef = 831B5180196048190035BE47 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		83F979CF1957347100AE1A06 /* Resources */ = {
@@ -277,6 +404,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		831B5183196048900035BE47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = RestKit;
+			targetProxy = 831B5182196048900035BE47 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		83F979DD1957347100AE1A06 /* InfoPlist.strings */ = {
@@ -365,9 +500,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)/../../Headers",
+					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
+				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -378,9 +524,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(BUILT_PRODUCTS_DIR)/../../Headers",
+					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
+				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

@@ -8,6 +8,7 @@
 
 #import "BQAppDelegate.h"
 #import "BQAppDelegate+Navigation.h"
+#import <RestKit/RestKit.h>
 
 @implementation BQAppDelegate
 
