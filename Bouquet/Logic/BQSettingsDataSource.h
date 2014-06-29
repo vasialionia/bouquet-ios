@@ -10,7 +10,7 @@
 
 @class BQCompliment;
 
-@protocol BQSettingsDataSource
+@protocol BQSettingsDatasource
 
 @required
 

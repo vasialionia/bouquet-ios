@@ -11,6 +11,8 @@
 #import "BQComplimentViewController.h"
 #import "BQSettingsViewController.h"
 
+extern NSString *const BQFirstRunKey;
+
 @interface BQAppDelegate : UIResponder <
     UIApplicationDelegate,
     BQWelcomeViewControllerDelegate,

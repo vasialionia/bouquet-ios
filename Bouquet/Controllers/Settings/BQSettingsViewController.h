@@ -12,12 +12,14 @@ typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
 };
 
 @protocol BQSettingsViewControllerDelegate;
-@protocol BQSettingsDataSource;
+@protocol BQSettingsDatasource;
+@protocol BQNotificationsDataSource;
 
 @interface BQSettingsViewController : UITableViewController
 
 @property (nonatomic, weak) id<BQSettingsViewControllerDelegate> delegate;
-@property (nonatomic, strong) id<BQSettingsDataSource> datasource;
+@property (nonatomic, strong) id<BQSettingsDatasource> settingsDatasource;
+@property (nonatomic, strong) id<BQNotificationsDataSource> notificationsDatasource;
 
 @end
 

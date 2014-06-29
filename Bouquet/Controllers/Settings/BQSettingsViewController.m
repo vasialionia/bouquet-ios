@@ -9,7 +9,8 @@
 #import "BQTableViewCellWithSwitch.h"
 #import "UITableView+BQ.h"
 #import "BQTableViewCellWithSegmentedControl.h"
-#import "BQSettingsDataSource.h"
+#import "BQSettingsDatasource.h"
+#import "BQNotificationsDataSource.h"
 
 typedef NS_ENUM(NSUInteger, BQSettingsTableSections) {
     BQSettingsTableSectionsSettings,
@@ -37,7 +38,11 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 }
 
 - (void)onSegmentedControlValueChanged:(UISegmentedControl *)segmentedControl {
-    self.datasource.sex = (BQSex)segmentedControl.selectedSegmentIndex;
+    self.settingsDatasource.sex = (BQSex)segmentedControl.selectedSegmentIndex;
+}
+
+- (void)onSwitchControlValueChanged:(UISwitch *)switchControl {
+    [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
 }
 
 - (NSString *)getSexTitleForSex:(BQSex)sex {
@@ -124,7 +129,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                         indexToInsert ++;
                     }
 
-                    cell.segmentedControl.selectedSegmentIndex = [self.datasource sex];
+                    cell.segmentedControl.selectedSegmentIndex = [self.settingsDatasource sex];
 
                     if (![cell.segmentedControl.allTargets containsObject:self]) {
                         [cell.segmentedControl addTarget:self action:@selector(onSegmentedControlValueChanged:) forControlEvents:UIControlEventValueChanged];
@@ -135,6 +140,12 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                 case BQSettingsTableSectionSettingsRowsNotifications: {
                     BQTableViewCellWithSwitch *cell = (BQTableViewCellWithSwitch *)[tableView cellOfClass:[BQTableViewCellWithSwitch class]];
                     cell.textLabel.text = @"Notifications";
+
+                    cell.switchControl.on = [self.notificationsDatasource isNotificationsEnabled];
+                    if (![cell.switchControl.allTargets containsObject:self]) {
+                        [cell.switchControl addTarget:self action:@selector(onSwitchControlValueChanged:) forControlEvents:UIControlEventValueChanged];
+                    }
+
                     return cell;
                 }
                 default:

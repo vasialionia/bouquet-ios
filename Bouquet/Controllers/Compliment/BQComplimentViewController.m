@@ -9,7 +9,7 @@
 #import "BQComplimentView.h"
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
-#import "BQComplimentDataSource.h"
+#import "BQComplimentDatasource.h"
 
 @implementation BQComplimentViewController
 
@@ -20,7 +20,7 @@
 }
 
 - (void)onComplimentTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    self.view.complimentLabel.text = [self.datasource getRandCompliment].text;
+    self.view.complimentLabel.text = [self.complimentDatasource getRandCompliment].text;
 }
 
 #pragma mark UIViewController methods
@@ -36,7 +36,7 @@
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onComplimentTap:)]];
     [self.view.infoButton addTarget:self action:@selector(onInfoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 
-    self.view.complimentLabel.text = [self.datasource getRandCompliment].text;
+    self.view.complimentLabel.text = [self.complimentDatasource getRandCompliment].text;
 }
 
 @end

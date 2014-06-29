@@ -6,13 +6,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BQSex.h"
 
 @class BQCompliment;
 
-@protocol BQComplimentDatasource
+@protocol BQNotificationsDataSource
 
 @required
 
-- (BQCompliment *)getRandCompliment;
+- (BOOL)isNotificationsEnabled;
+- (void)setNotificationsEnabled:(BOOL)enabled;
 
 @end

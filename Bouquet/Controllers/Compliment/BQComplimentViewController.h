@@ -9,13 +9,13 @@
 
 @class BQComplimentView;
 @protocol BQComplimentViewControllerDelegate;
-@protocol BQComplimentDataSource;
+@protocol BQComplimentDatasource;
 
 @interface BQComplimentViewController : UIViewController
 
 @property (nonatomic, strong) BQComplimentView *view;
 @property (nonatomic, weak) id<BQComplimentViewControllerDelegate> delegate;
-@property (nonatomic, strong) id<BQComplimentDataSource> datasource;
+@property (nonatomic, strong) id<BQComplimentDatasource> complimentDatasource;
 
 @end
 

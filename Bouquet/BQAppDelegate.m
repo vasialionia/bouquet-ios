@@ -10,9 +10,11 @@
 #import "BQAppDelegate.h"
 #import "BQAppDelegate+Navigation.h"
 #import "BQObjectManager.h"
+#import "BQNotificationsManager.h"
+
+NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
 static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/";
-static NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
 @implementation BQAppDelegate
 
@@ -25,18 +27,23 @@ static NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
 
+    [[UIApplication sharedApplication] cancelAllLocalNotifications];
+
+    [BQNotificationsManager sharedManager].complimentDatasource = objectManager;
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [self createRootViewController];
     [self.window makeKeyAndVisible];
-
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQFirstRunKey];
-    [[NSUserDefaults standardUserDefaults] synchronize];
 
     return YES;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
+
+    if ([BQNotificationsManager sharedManager].notificationsEnabled) {
+        [[BQNotificationsManager sharedManager] renewNotifications];
+    }
 }
 
 #pragma mark Interface methods

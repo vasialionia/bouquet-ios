@@ -145,39 +145,6 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
     return self;
 }
 
-#pragma mark Interface methods
-
-- (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock {
-    [self getObject:nil path:@"compliment" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        [self initLangKey];
-
-        if (completionBlock != nil) {
-            completionBlock(YES, @{
-                    BQObjectManagerCompletionBlockKeyResponse: mappingResult.array
-            });
-        }
-    }
-    failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        BQLogError(@"Error while getting compliments. %@", error);
-
-        if (completionBlock != nil) {
-            completionBlock(YES, @{
-                    BQObjectManagerCompletionBlockKeyError: error
-            });
-        }
-    }];
-}
-
-- (void)setSex:(BQSex)sex
-{
-    if (_sex != sex) {
-        _sex = sex;
-
-        [[NSUserDefaults standardUserDefaults] setInteger:_sex forKey:BQObjectManagerSexKey];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-    }
-}
-
 #pragma mark BQComplimentDataSource protocol
 
 - (BQCompliment *)getRandCompliment {
@@ -218,6 +185,41 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
     self.prevRandComplimentId = compliment.complimentId;
 
     return compliment;
+}
+
+#pragma mark BQSettingsDataSource protocol
+
+- (void)setSex:(BQSex)sex
+{
+    if (_sex != sex) {
+        _sex = sex;
+
+        [[NSUserDefaults standardUserDefaults] setInteger:_sex forKey:BQObjectManagerSexKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+}
+
+#pragma mark Interface methods
+
+- (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock {
+    [self getObject:nil path:@"compliment" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        [self initLangKey];
+
+        if (completionBlock != nil) {
+            completionBlock(YES, @{
+                    BQObjectManagerCompletionBlockKeyResponse: mappingResult.array
+            });
+        }
+    }
+            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        BQLogError(@"Error while getting compliments. %@", error);
+
+        if (completionBlock != nil) {
+            completionBlock(YES, @{
+                    BQObjectManagerCompletionBlockKeyError: error
+            });
+        }
+    }];
 }
 
 @end
