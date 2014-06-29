@@ -15,6 +15,12 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
 #pragma mark Private methods
 
+- (UIViewController *)createWelcomeViewController {
+    BQWelcomeViewController *welcomeViewController = [[BQWelcomeViewController alloc] init];
+    welcomeViewController.delegate = self;
+    return welcomeViewController;
+}
+
 - (UIViewController *)createComplimentViewController {
     BQComplimentViewController *complimentViewController = [[BQComplimentViewController alloc] init];
     complimentViewController.delegate = self;
@@ -74,9 +80,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 #pragma mark Interface methods
 
 - (UIViewController *)createRootViewController {
-    BQWelcomeViewController *welcomeViewController = [[BQWelcomeViewController alloc] init];
-    welcomeViewController.delegate = self;
-    return welcomeViewController;
+    return [self isFirstRun] ? [self createWelcomeViewController] : [self createComplimentViewController];
 }
 
 @end

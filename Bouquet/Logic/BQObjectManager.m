@@ -15,6 +15,7 @@ NSString *const BQObjectManagerCompletionBlockKeyResponse = @"BQObjectManagerCom
 NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerCompletionBlockKeyError";
 
 static NSString *const BQObjectManagerDefaultLangKey = @"en";
+static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
 
 @interface BQObjectManager ()
 
@@ -133,6 +134,8 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
 - (id)initWithHTTPClient:(AFHTTPClient *)client {
     self = [super initWithHTTPClient:client];
     if (self) {
+        _sex = (BQSex)[[NSUserDefaults standardUserDefaults] integerForKey:BQObjectManagerSexKey];
+
         self.requestSerializationMIMEType = RKMIMETypeJSON;
 
         [self initManagedObjectStore];
@@ -163,6 +166,16 @@ static NSString *const BQObjectManagerDefaultLangKey = @"en";
             });
         }
     }];
+}
+
+- (void)setSex:(BQSex)sex
+{
+    if (_sex != sex) {
+        _sex = sex;
+
+        [[NSUserDefaults standardUserDefaults] setInteger:_sex forKey:BQObjectManagerSexKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
 }
 
 #pragma mark BQComplimentDataSource protocol

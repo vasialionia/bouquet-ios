@@ -12,6 +12,7 @@
 #import "BQObjectManager.h"
 
 static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/";
+static NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
 @implementation BQAppDelegate
 
@@ -28,11 +29,20 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
     self.window.rootViewController = [self createRootViewController];
     [self.window makeKeyAndVisible];
 
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQFirstRunKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+
     return YES;
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
+}
+
+#pragma mark Interface methods
+
+- (BOOL)isFirstRun {
+    return ![[NSUserDefaults standardUserDefaults] boolForKey:BQFirstRunKey];
 }
 
 @end

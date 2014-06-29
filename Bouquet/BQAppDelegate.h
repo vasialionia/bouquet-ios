@@ -20,4 +20,6 @@
 
 @property (nonatomic, strong) UIWindow *window;
 
+- (BOOL)isFirstRun;
+
 @end
