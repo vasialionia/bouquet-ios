@@ -52,4 +52,23 @@
     self.view.complimentLabel.text = self.currentComplient.text;
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.view startAnimation];
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [self.view stopAnimation];
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
+    [super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
+
+    if ([self.view isAnimating]) {
+        [self.view stopAnimation];
+        [self.view startAnimation];
+    }
+}
+
 @end

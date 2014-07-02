@@ -22,8 +22,10 @@
 		2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2C05161290FE84F90203 /* RestKitLicense */; };
 		2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */; };
 		2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */; };
+		2F2E2DF42E64E63790311919 /* BQBubblesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E26DD1BAEE5A77C734D8F /* BQBubblesView.m */; };
 		2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29AA8852751293D04F9E /* BQObjectManager.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
+		2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */; };
 		2F2E2FEE74B1F402EE955057 /* infinite_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */; };
 		2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2436CE6E767F2F23E78D /* BQCompliment.m */; };
 		831B5184196048B50035BE47 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B517B196048190035BE47 /* libRestKit.a */; };
@@ -85,6 +87,7 @@
 /* Begin PBXFileReference section */
 		2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQInfiniteButton.h; sourceTree = "<group>"; };
 		2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BQ.h"; sourceTree = "<group>"; };
+		2F2E20E856753F4EED578CA0 /* BQBubblesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBubblesView.h; sourceTree = "<group>"; };
 		2F2E20E90C4349A5AA496954 /* BQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsViewController.h; sourceTree = "<group>"; };
 		2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLicenseViewController.m; sourceTree = "<group>"; };
 		2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infinite_male@2x.png"; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		2F2E247BDD5E10DBF5C1618F /* BQComplimentDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentDatasource.h; sourceTree = "<group>"; };
 		2F2E25E348092194C9924A41 /* BQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSettingsViewController.m; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
+		2F2E26DD1BAEE5A77C734D8F /* BQBubblesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQBubblesView.m; sourceTree = "<group>"; };
 		2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */ = {isa = PBXFileReference; lastKnownFileType = file.sqlite; path = bouquet.sqlite_backup; sourceTree = "<group>"; };
 		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSegmentedControl.m; sourceTree = "<group>"; };
@@ -117,9 +121,11 @@
 		2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
 		2F2E2B920A7CFCDFA1B5E8CD /* BQNotificationsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQNotificationsDataSource.h; sourceTree = "<group>"; };
 		2F2E2BACAC38BA0A4F78F257 /* BQComplimentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentViewController.h; sourceTree = "<group>"; };
+		2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQBluredView.m; sourceTree = "<group>"; };
 		2F2E2C05161290FE84F90203 /* RestKitLicense */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RestKitLicense; sourceTree = "<group>"; };
 		2F2E2CB60EC71AA89E0A742E /* BQSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSex.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
+		2F2E2D894CB297F0CA6C7AB0 /* BQBluredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBluredView.h; sourceTree = "<group>"; };
 		2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLicenseViewController.h; sourceTree = "<group>"; };
 		2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNotificationsManager.m; sourceTree = "<group>"; };
 		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
@@ -292,6 +298,10 @@
 			children = (
 				2F2E23DCEF017FDAEF16D5B6 /* BQInfiniteView.m */,
 				2F2E287AF724D8640F0C30AF /* BQInfiniteView.h */,
+				2F2E26DD1BAEE5A77C734D8F /* BQBubblesView.m */,
+				2F2E20E856753F4EED578CA0 /* BQBubblesView.h */,
+				2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */,
+				2F2E2D894CB297F0CA6C7AB0 /* BQBluredView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -531,6 +541,8 @@
 				2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */,
 				2F2E2B61D02010513F30F308 /* BQInfiniteView.m in Sources */,
 				2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */,
+				2F2E2DF42E64E63790311919 /* BQBubblesView.m in Sources */,
+				2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

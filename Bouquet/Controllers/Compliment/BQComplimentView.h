@@ -6,8 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BQBubblesView.h"
 
-@interface BQComplimentView : UIView
+@interface BQComplimentView : BQBubblesView
 
 @property (nonatomic, strong, readonly) UILabel *complimentLabel;
 @property (nonatomic, strong, readonly) UIButton *infoButton;

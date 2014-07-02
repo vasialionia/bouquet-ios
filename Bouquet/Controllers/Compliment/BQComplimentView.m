@@ -72,6 +72,29 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
 
+        self.minRadius = 40.0f;
+        self.maxRadius = 150.0f;
+        self.density = 0.0002f;
+        self.minSpeed = 4.0f;
+        self.maxSpeed = 8.0f;
+
+        self.colors = @[
+                [UIColor colorWithRed:184.0f / 255.0f green:164.0f / 255.0f blue:233.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:153.0f / 255.0f green:233.0f / 255.0f blue:255.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:92.0f / 255.0f green:220.0f / 255.0f blue:254.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:110.0f / 255.0f green:178.0f / 255.0f blue:241.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:255.0f / 255.0f green:179.0f / 255.0f blue:233.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:153.0f / 255.0f green:188.0f / 255.0f blue:241.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:153.0f / 255.0f green:141.0f / 255.0f blue:228.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:38.0f / 255.0f green:222.0f / 255.0f blue:158.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:64.0f / 255.0f green:236.0f / 255.0f blue:95.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:38.0f / 255.0f green:233.0f / 255.0f blue:62.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:64.0f / 255.0f green:255.0f / 255.0f blue:101.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:179.0f / 255.0f green:102.0f / 255.0f blue:150.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:107.0f / 255.0f green:141.0f / 255.0f blue:191.0f / 255.0f alpha:1.0f],
+                [UIColor colorWithRed:255.0f / 255.0f green:102.0f / 255.0f blue:112.0f / 255.0f alpha:1.0f]
+        ];
+
         [self initComplimentLabel];
         [self initInfoButton];
         [self initShareButton];

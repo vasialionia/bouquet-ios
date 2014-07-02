@@ -8,7 +8,7 @@
 #import "BQInfiniteButton.h"
 #import "BQInfiniteView.h"
 
-@interface BQInfiniteButton()
+@interface BQInfiniteButton ()
 
 @property (nonatomic, strong, readwrite) BQInfiniteView *infiniteView;
 

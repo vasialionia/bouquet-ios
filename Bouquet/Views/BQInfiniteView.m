@@ -7,7 +7,7 @@
 
 #import "BQInfiniteView.h"
 
-@interface BQInfiniteView()
+@interface BQInfiniteView ()
 
 @property (nonatomic, assign) CGFloat animationSpeed;
 
