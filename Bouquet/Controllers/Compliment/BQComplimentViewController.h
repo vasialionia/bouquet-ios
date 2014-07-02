@@ -10,6 +10,7 @@
 @class BQComplimentView;
 @protocol BQComplimentViewControllerDelegate;
 @protocol BQComplimentDatasource;
+@class BQCompliment;
 
 @interface BQComplimentViewController : UIViewController
 
@@ -24,5 +25,6 @@
 @required
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController;
+- (void)complimentViewController:(BQComplimentViewController *)complimentViewController didTapShareButtonForCompliment:(BQCompliment *)compliment;
 
 @end

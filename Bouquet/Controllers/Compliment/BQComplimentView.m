@@ -11,6 +11,7 @@
 
 @property (nonatomic, strong, readwrite) UILabel *complimentLabel;
 @property (nonatomic, strong, readwrite) UIButton *infoButton;
+@property (nonatomic, strong, readwrite) UIButton *shareButton;
 
 @end
 
@@ -47,6 +48,23 @@
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-25-[infoButton(30)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"infoButton": self.infoButton}]];
 }
 
+- (void)initShareButton {
+    self.shareButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.shareButton.backgroundColor = [UIColor clearColor];
+    self.shareButton.layer.cornerRadius = 15.0f;
+    self.shareButton.layer.borderWidth = 1.0f;
+    self.shareButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    self.shareButton.titleEdgeInsets = UIEdgeInsetsMake(0.0f, 1.0f, 1.0f, 0.0f);
+    [self.shareButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.shareButton setTitle:@"⏏" forState:UIControlStateNormal];
+
+    self.shareButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self addSubview:self.shareButton];
+
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[shareButton(30)]-10-|" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"shareButton": self.shareButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[shareButton(30)]-10-|" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"shareButton": self.shareButton}]];
+}
+
 #pragma mark UIView methods
 
 - (id)initWithFrame:(CGRect)frame {
@@ -56,6 +74,7 @@
 
         [self initComplimentLabel];
         [self initInfoButton];
+        [self initShareButton];
     }
     return self;
 }

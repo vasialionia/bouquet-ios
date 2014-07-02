@@ -9,6 +9,7 @@
 #import "BQObjectManager.h"
 #import "BQLicenseViewController.h"
 #import "BQNotificationsManager.h"
+#import "BQCompliment.h"
 
 static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
@@ -68,6 +69,17 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController {
     self.window.rootViewController = [self createSettingsViewController];
     [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
+}
+
+- (void)complimentViewController:(BQComplimentViewController *)complimentViewController didTapShareButtonForCompliment:(BQCompliment *)compliment {
+    [UIPasteboard generalPasteboard].string = compliment.text;
+
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Copied to clipboard", nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [alert show];
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [alert dismissWithClickedButtonIndex:0 animated:YES];
+    });
 }
 
 #pragma mark BQSettingsViewControllerDelegate protocol

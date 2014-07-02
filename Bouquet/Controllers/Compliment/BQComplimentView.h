@@ -11,5 +11,6 @@
 
 @property (nonatomic, strong, readonly) UILabel *complimentLabel;
 @property (nonatomic, strong, readonly) UIButton *infoButton;
+@property (nonatomic, strong, readonly) UIButton *shareButton;
 
 @end

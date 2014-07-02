@@ -11,6 +11,12 @@
 #import "BQCompliment.h"
 #import "BQComplimentDatasource.h"
 
+@interface BQComplimentViewController()
+
+@property (nonatomic, strong) BQCompliment *currentComplient;
+
+@end
+
 @implementation BQComplimentViewController
 
 #pragma mark Private methods
@@ -19,8 +25,13 @@
     [self.delegate complimentViewControllerDidTapInfoButton:self];
 }
 
+- (void)onShareButtonClick:(UIButton *)button {
+    [self.delegate complimentViewController:self didTapShareButtonForCompliment:self.currentComplient];
+}
+
 - (void)onComplimentTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    self.view.complimentLabel.text = [self.complimentDatasource getRandCompliment].text;
+    self.currentComplient = [self.complimentDatasource getRandCompliment];
+    self.view.complimentLabel.text = self.currentComplient.text;
 }
 
 #pragma mark UIViewController methods
@@ -35,8 +46,10 @@
 
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onComplimentTap:)]];
     [self.view.infoButton addTarget:self action:@selector(onInfoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view.shareButton addTarget:self action:@selector(onShareButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 
-    self.view.complimentLabel.text = [self.complimentDatasource getRandCompliment].text;
+    self.currentComplient = [self.complimentDatasource getRandCompliment];
+    self.view.complimentLabel.text = self.currentComplient.text;
 }
 
 @end
