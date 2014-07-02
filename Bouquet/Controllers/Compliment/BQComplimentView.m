@@ -22,6 +22,7 @@
     self.complimentLabel = [[UILabel alloc] initWithFrame:CGRectZero];
     self.complimentLabel.numberOfLines = 0;
     self.complimentLabel.textAlignment = NSTextAlignmentCenter;
+    self.complimentLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:20.0f];
 
     self.complimentLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.complimentLabel];
@@ -32,7 +33,11 @@
 
 - (void)initInfoButton {
     self.infoButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    self.infoButton.backgroundColor = [UIColor blackColor];
+    self.infoButton.backgroundColor = [UIColor clearColor];
+    self.infoButton.layer.cornerRadius = 15.0f;
+    self.infoButton.layer.borderWidth = 1.0f;
+    self.infoButton.layer.borderColor = [[UIColor blackColor] CGColor];
+    [self.infoButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [self.infoButton setTitle:@"i" forState:UIControlStateNormal];
 
     self.infoButton.translatesAutoresizingMaskIntoConstraints = NO;

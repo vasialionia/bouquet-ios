@@ -33,8 +33,9 @@
     self.maleButton.titleLabel.numberOfLines = 0;
     self.maleButton.titleLabel.textAlignment = NSTextAlignmentCenter;
 
-    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:@"♂\nMALE"];
-    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.0f green:198.0f / 255.0f blue:245.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, 6)];
+    NSString *maleString = [NSString stringWithFormat:@"♂\n%@", NSLocalizedString(@"MALE", nil)];
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:maleString];
+    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.0f green:198.0f / 255.0f blue:245.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, maleString.length)];
     [titleString addAttribute:NSFontAttributeName value:[UIFont fontWithName:self.maleButton.titleLabel.font.fontName size:40.0f] range:NSMakeRange(0, 1)];
     [self.maleButton setAttributedTitle:titleString forState:UIControlStateNormal];
 
@@ -61,8 +62,9 @@
     self.femaleButton.titleLabel.numberOfLines = 0;
     self.femaleButton.titleLabel.textAlignment = NSTextAlignmentCenter;
 
-    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:@"♀\nFEMALE"];
-    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:225.0f / 255.0f green:0.0f blue:124.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, 8)];
+    NSString *femaleString = [NSString stringWithFormat:@"♀\n%@", NSLocalizedString(@"FEMALE", nil)];
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:femaleString];
+    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:225.0f / 255.0f green:0.0f blue:124.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, femaleString.length)];
     [titleString addAttribute:NSFontAttributeName value:[UIFont fontWithName:self.femaleButton.titleLabel.font.fontName size:40.0f] range:NSMakeRange(0, 1)];
     [self.femaleButton setAttributedTitle:titleString forState:UIControlStateNormal];
 
@@ -86,7 +88,7 @@
     self.otherButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10.0f];
 
     [self.otherButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-    [self.otherButton setTitle:@"IT'S A SECRET :-)" forState:UIControlStateNormal];
+    [self.otherButton setTitle:NSLocalizedString(@"IT'S A SECRET :-)", nil) forState:UIControlStateNormal];
 
     self.otherButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.otherButton];
