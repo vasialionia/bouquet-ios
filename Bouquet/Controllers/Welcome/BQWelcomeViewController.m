@@ -8,6 +8,7 @@
 
 #import "BQWelcomeViewController.h"
 #import "BQWelcomeView.h"
+#import "BQInfiniteButton.h"
 
 @implementation BQWelcomeViewController
 

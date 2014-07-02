@@ -61,8 +61,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 
 #pragma mark NSObject methods
 
-- (id)init
-{
+- (id)init {
     return [self initWithStyle:UITableViewStyleGrouped];
 }
 

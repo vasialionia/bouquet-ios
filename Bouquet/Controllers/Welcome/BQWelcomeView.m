@@ -6,11 +6,13 @@
 //
 
 #import "BQWelcomeView.h"
+#import "BQInfiniteButton.h"
+#import "BQInfiniteView.h"
 
 @interface BQWelcomeView ()
 
-@property (nonatomic, strong, readwrite) UIButton *maleButton;
-@property (nonatomic, strong, readwrite) UIButton *femaleButton;
+@property (nonatomic, strong, readwrite) BQInfiniteButton *maleButton;
+@property (nonatomic, strong, readwrite) BQInfiniteButton *femaleButton;
 @property (nonatomic, strong, readwrite) UIButton *otherButton;
 
 @end
@@ -20,15 +22,27 @@
 #pragma mark Private methods
 
 - (void)initMaleButton {
-    self.maleButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    self.maleButton.backgroundColor = [UIColor blueColor];
-    [self.maleButton setTitle:@"Male" forState:UIControlStateNormal];
+    self.maleButton = [[BQInfiniteButton alloc] initWithFrame:CGRectZero];
+    self.maleButton.backgroundColor = [UIColor clearColor];
+    self.maleButton.infiniteView.image = [UIImage imageNamed:@"infinite_male.png"];
+    self.maleButton.layer.masksToBounds = YES;
+    self.maleButton.layer.cornerRadius = 6.0f;
+    self.maleButton.layer.borderWidth = 2.0f;
+    self.maleButton.layer.borderColor = [[UIColor colorWithRed:0.0f green:198.0f / 255.0f blue:245.0f / 255.0f alpha:1.0f] CGColor];
+    self.maleButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
+    self.maleButton.titleLabel.numberOfLines = 0;
+    self.maleButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:@"♂\nMALE"];
+    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:0.0f green:198.0f / 255.0f blue:245.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, 6)];
+    [titleString addAttribute:NSFontAttributeName value:[UIFont fontWithName:self.maleButton.titleLabel.font.fontName size:40.0f] range:NSMakeRange(0, 1)];
+    [self.maleButton setAttributedTitle:titleString forState:UIControlStateNormal];
 
     self.maleButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.maleButton];
 
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[maleButton(100)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"maleButton": self.maleButton}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[maleButton(40)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"maleButton": self.maleButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[maleButton(130)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"maleButton": self.maleButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[maleButton(70)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"maleButton": self.maleButton}]];
     [self addConstraints:@[
             [NSLayoutConstraint constraintWithItem:self.maleButton attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:-10.0f],
             [NSLayoutConstraint constraintWithItem:self.maleButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.0f]
@@ -36,15 +50,27 @@
 }
 
 - (void)initFemaleButton {
-    self.femaleButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    self.femaleButton.backgroundColor = [UIColor purpleColor];
-    [self.femaleButton setTitle:@"Female" forState:UIControlStateNormal];
+    self.femaleButton = [[BQInfiniteButton alloc] initWithFrame:CGRectZero];
+    self.femaleButton.backgroundColor = [UIColor clearColor];
+    self.femaleButton.infiniteView.image = [UIImage imageNamed:@"infinite_female.png"];
+    self.femaleButton.layer.masksToBounds = YES;
+    self.femaleButton.layer.cornerRadius = 6.0f;
+    self.femaleButton.layer.borderWidth = 2.0f;
+    self.femaleButton.layer.borderColor = [[UIColor colorWithRed:225.0f / 255.0f green:0.0f blue:124.0f / 255.0f alpha:1.0f] CGColor];
+    self.femaleButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f];
+    self.femaleButton.titleLabel.numberOfLines = 0;
+    self.femaleButton.titleLabel.textAlignment = NSTextAlignmentCenter;
+
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:@"♀\nFEMALE"];
+    [titleString addAttribute:NSForegroundColorAttributeName value:[UIColor colorWithRed:225.0f / 255.0f green:0.0f blue:124.0f / 255.0f alpha:1.0f] range:NSMakeRange(0, 8)];
+    [titleString addAttribute:NSFontAttributeName value:[UIFont fontWithName:self.femaleButton.titleLabel.font.fontName size:40.0f] range:NSMakeRange(0, 1)];
+    [self.femaleButton setAttributedTitle:titleString forState:UIControlStateNormal];
 
     self.femaleButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.femaleButton];
 
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[femaleButton(100)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"femaleButton": self.femaleButton}]];
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[femaleButton(40)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"femaleButton": self.femaleButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[femaleButton(130)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"femaleButton": self.femaleButton}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[femaleButton(70)]" options:(NSLayoutFormatOptions)0 metrics:nil views:@{@"femaleButton": self.femaleButton}]];
     [self addConstraints:@[
             [NSLayoutConstraint constraintWithItem:self.femaleButton attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:10.0f],
             [NSLayoutConstraint constraintWithItem:self.femaleButton attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterY multiplier:1.0f constant:0.0f]
@@ -53,8 +79,14 @@
 
 - (void)initOtherButton {
     self.otherButton = [[UIButton alloc] initWithFrame:CGRectZero];
-    self.otherButton.backgroundColor = [UIColor orangeColor];
-    [self.otherButton setTitle:@"It's a secret" forState:UIControlStateNormal];
+    self.otherButton.backgroundColor = [UIColor clearColor];
+    self.otherButton.layer.cornerRadius = 6.0f;
+    self.otherButton.layer.borderWidth = 1.0f;
+    self.otherButton.layer.borderColor = [[UIColor grayColor]CGColor];
+    self.otherButton.titleLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:10.0f];
+
+    [self.otherButton setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [self.otherButton setTitle:@"IT'S A SECRET :-)" forState:UIControlStateNormal];
 
     self.otherButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.otherButton];

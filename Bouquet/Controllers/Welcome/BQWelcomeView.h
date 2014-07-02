@@ -7,10 +7,12 @@
 
 #import <Foundation/Foundation.h>
 
+@class BQInfiniteButton;
+
 @interface BQWelcomeView : UIView
 
-@property (nonatomic, strong, readonly) UIButton *maleButton;
-@property (nonatomic, strong, readonly) UIButton *femaleButton;
+@property (nonatomic, strong, readonly) BQInfiniteButton *maleButton;
+@property (nonatomic, strong, readonly) BQInfiniteButton *femaleButton;
 @property (nonatomic, strong, readonly) UIButton *otherButton;
 
 @end

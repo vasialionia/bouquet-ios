@@ -9,18 +9,22 @@
 /* Begin PBXBuildFile section */
 		2F2E203894049E337956AEA1 /* BQTableViewCellWithSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */; };
 		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
+		2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */; };
 		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
 		2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */; };
 		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
 		2F2E27AB61103973DB8CE775 /* bouquet.sqlite_backup in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */; };
 		2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
+		2F2E2B385DF07B9DA5E590FC /* infinite_female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E23E9F1DB0D29D851D394 /* infinite_female@2x.png */; };
+		2F2E2B61D02010513F30F308 /* BQInfiniteView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E23DCEF017FDAEF16D5B6 /* BQInfiniteView.m */; };
 		2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E25E348092194C9924A41 /* BQSettingsViewController.m */; };
 		2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2C05161290FE84F90203 /* RestKitLicense */; };
 		2F2E2CFF7DE8EF149CB76182 /* BQTableViewCellWithSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */; };
 		2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */; };
 		2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29AA8852751293D04F9E /* BQObjectManager.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
+		2F2E2FEE74B1F402EE955057 /* infinite_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */; };
 		2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2436CE6E767F2F23E78D /* BQCompliment.m */; };
 		831B5184196048B50035BE47 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B517B196048190035BE47 /* libRestKit.a */; };
 		831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5185196048B50035BE47 /* CFNetwork.framework */; };
@@ -78,12 +82,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQInfiniteButton.h; sourceTree = "<group>"; };
 		2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BQ.h"; sourceTree = "<group>"; };
 		2F2E20E90C4349A5AA496954 /* BQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsViewController.h; sourceTree = "<group>"; };
 		2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQLicenseViewController.m; sourceTree = "<group>"; };
+		2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infinite_male@2x.png"; sourceTree = "<group>"; };
 		2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentView.m; sourceTree = "<group>"; };
 		2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentViewController.m; sourceTree = "<group>"; };
 		2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BQ.m"; sourceTree = "<group>"; };
+		2F2E23DCEF017FDAEF16D5B6 /* BQInfiniteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQInfiniteView.m; sourceTree = "<group>"; };
+		2F2E23E9F1DB0D29D851D394 /* infinite_female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infinite_female@2x.png"; sourceTree = "<group>"; };
 		2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeView.h; sourceTree = "<group>"; };
 		2F2E2436CE6E767F2F23E78D /* BQCompliment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCompliment.m; sourceTree = "<group>"; };
 		2F2E244B4E944658F221567C /* BQCompliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCompliment.h; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */ = {isa = PBXFileReference; lastKnownFileType = file.sqlite; path = bouquet.sqlite_backup; sourceTree = "<group>"; };
 		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSegmentedControl.m; sourceTree = "<group>"; };
+		2F2E287AF724D8640F0C30AF /* BQInfiniteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQInfiniteView.h; sourceTree = "<group>"; };
 		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
 		2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BQAppDelegate+Navigation.m"; sourceTree = "<group>"; };
 		2F2E29812DA04162D3F3D2B4 /* BQSettingsDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsDatasource.h; sourceTree = "<group>"; };
@@ -101,6 +110,7 @@
 		2F2E29BEB2852E38CE083BC8 /* BQTableViewCellWithSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSwitch.h; sourceTree = "<group>"; };
 		2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeView.m; sourceTree = "<group>"; };
 		2F2E2B0778FFC37DA2A46C46 /* BQTableViewCellWithSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSegmentedControl.h; sourceTree = "<group>"; };
+		2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQInfiniteButton.m; sourceTree = "<group>"; };
 		2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeViewController.h; sourceTree = "<group>"; };
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
 		2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				2F2E2C05161290FE84F90203 /* RestKitLicense */,
+				2F2E2DA305A06E0FF703279D /* Images */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -227,6 +238,15 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		2F2E2AFA4C28AD2756EA71AC /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */,
+				2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		2F2E2CD75B276BC105A22085 /* Logic */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,6 +263,15 @@
 			path = Logic;
 			sourceTree = "<group>";
 		};
+		2F2E2DA305A06E0FF703279D /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E23E9F1DB0D29D851D394 /* infinite_female@2x.png */,
+				2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		2F2E2E5CD691954D0665C9C8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +281,15 @@
 				2F2E280A1B9059BE40B69833 /* Lincense */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2F2E2E860A728095637C2DA6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F2E23DCEF017FDAEF16D5B6 /* BQInfiniteView.m */,
+				2F2E287AF724D8640F0C30AF /* BQInfiniteView.h */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		2F2E2EC7D400B688E497E111 /* Compliment */ = {
@@ -344,6 +382,8 @@
 				83F979DB1957347100AE1A06 /* Supporting Files */,
 				83F979E61957347100AE1A06 /* Images.xcassets */,
 				2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */,
+				2F2E2E860A728095637C2DA6 /* Views */,
+				2F2E2AFA4C28AD2756EA71AC /* Controls */,
 			);
 			path = Bouquet;
 			sourceTree = "<group>";
@@ -454,6 +494,8 @@
 				83F979E71957347100AE1A06 /* Images.xcassets in Resources */,
 				2F2E2CA0097DA393F79BB866 /* RestKitLicense in Resources */,
 				2F2E27AB61103973DB8CE775 /* bouquet.sqlite_backup in Resources */,
+				2F2E2B385DF07B9DA5E590FC /* infinite_female@2x.png in Resources */,
+				2F2E2FEE74B1F402EE955057 /* infinite_male@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -480,6 +522,8 @@
 				2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */,
 				2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */,
 				2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */,
+				2F2E2B61D02010513F30F308 /* BQInfiniteView.m in Sources */,
+				2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

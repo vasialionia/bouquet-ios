@@ -221,7 +221,7 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
             });
         }
     }
-            failure:^(RKObjectRequestOperation *operation, NSError *error) {
+    failure:^(RKObjectRequestOperation *operation, NSError *error) {
         BQLogError(@"Error while getting compliments. %@", error);
 
         if (completionBlock != nil) {
