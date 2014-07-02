@@ -96,7 +96,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
     NSString *licensePath = [[NSBundle mainBundle] pathForResource:@"RestKitLicense" ofType:nil];
     UIViewController *licenseViewController = [self createLicenseViewControllerWithLicensePath:licensePath];
-    licenseViewController.title = @"RestKit License";
+    licenseViewController.title = @"RestKit";
     [(UINavigationController *)self.window.rootViewController pushViewController:licenseViewController animated:YES];
 }
 

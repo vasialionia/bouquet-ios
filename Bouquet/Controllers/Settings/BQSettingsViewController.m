@@ -77,7 +77,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 - (id)initWithStyle:(UITableViewStyle)style {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Settings";
+        self.title = NSLocalizedString(@"Settings", nil);
     }
     return self;
 }
@@ -103,9 +103,9 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     switch(section) {
         case BQSettingsTableSectionsSettings:
-            return @"Settings";
+            return NSLocalizedString(@"Settings", nil);
         case BQSettingsTableSectionsLincenses:
-            return @"3rd party libraries used";
+            return NSLocalizedString(@"3rd party libraries used", nil);
         default:
             BQAssert(NO, @"Invalid section index.");
             return nil;
@@ -118,7 +118,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
             switch(indexPath.row) {
                 case BQSettingsTableSectionSettingsRowsSex: {
                     BQTableViewCellWithSegmentedControl *cell = (BQTableViewCellWithSegmentedControl *)[tableView cellOfClass:[BQTableViewCellWithSegmentedControl class]];
-                    cell.textLabel.text = @"Sex";
+                    cell.textLabel.text = NSLocalizedString(@"Sex", nil);
 
                     [cell.segmentedControl removeAllSegments];
                     NSUInteger indexToInsert = 0;
@@ -138,7 +138,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                 }
                 case BQSettingsTableSectionSettingsRowsNotifications: {
                     BQTableViewCellWithSwitch *cell = (BQTableViewCellWithSwitch *)[tableView cellOfClass:[BQTableViewCellWithSwitch class]];
-                    cell.textLabel.text = @"Notifications";
+                    cell.textLabel.text = NSLocalizedString(@"Notifications", nil);
 
                     cell.switchControl.on = [self.notificationsDatasource isNotificationsEnabled];
                     if (![cell.switchControl.allTargets containsObject:self]) {
