@@ -40,11 +40,11 @@
 #pragma mark Interface methods
 
 - (UIColor *)tintColor {
-    return self.toolBar.tintColor;
+    return self.toolBar.barTintColor;
 }
 
 - (void)setTintColor:(UIColor *)tintColor {
-    self.toolBar.tintColor = tintColor;
+    self.toolBar.barTintColor = tintColor;
 }
 
 @end
