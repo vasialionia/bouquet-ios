@@ -37,6 +37,18 @@
     }
 }
 
+- (void)onApplicationWillResignActiveNotification:(NSNotification *)notification {
+    if ([self.view isAnimating]) {
+        [self.view stopAnimation];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onApplicationWillEnterForegroundNotification:) name:UIApplicationWillEnterForegroundNotification object:nil];
+    }
+}
+
+- (void)onApplicationWillEnterForegroundNotification:(NSNotification *)notification {
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillEnterForegroundNotification object:nil];
+    [self.view startAnimation];
+}
+
 #pragma mark UIViewController methods
 
 - (void)loadView {
@@ -58,11 +70,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     [self.view startAnimation];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onApplicationWillResignActiveNotification:) name:UIApplicationWillResignActiveNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
     [super viewDidDisappear:animated];
     [self.view stopAnimation];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
