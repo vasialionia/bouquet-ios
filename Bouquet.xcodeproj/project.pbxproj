@@ -41,6 +41,7 @@
 		8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */; };
 		8358F7BC19656247007B8201 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BB19656247007B8201 /* libz.dylib */; };
 		8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BD1965624F007B8201 /* libsqlite3.dylib */; };
+		8358F7C21965763A007B8201 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7C119657639007B8201 /* Crashlytics.framework */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -154,6 +155,7 @@
 		8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		8358F7BB19656247007B8201 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8358F7BD1965624F007B8201 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		8358F7C119657639007B8201 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -175,6 +177,7 @@
 			files = (
 				8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */,
 				8358F7BC19656247007B8201 /* libz.dylib in Frameworks */,
+				8358F7C21965763A007B8201 /* Crashlytics.framework in Frameworks */,
 				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
 				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
 				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
@@ -424,6 +427,7 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8358F7C119657639007B8201 /* Crashlytics.framework */,
 				8358F7BD1965624F007B8201 /* libsqlite3.dylib */,
 				8358F7BB19656247007B8201 /* libz.dylib */,
 				831B5185196048B50035BE47 /* CFNetwork.framework */,
@@ -485,6 +489,7 @@
 				83F979CD1957347100AE1A06 /* Sources */,
 				83F979CE1957347100AE1A06 /* Frameworks */,
 				83F979CF1957347100AE1A06 /* Resources */,
+				8358F7BF1965753B007B8201 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -578,6 +583,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8358F7BF1965753B007B8201 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n./Crashlytics.framework/run 35b943bcae32aead64bc43aeb248f73a9af0ed81 9b3d77f435e6b9855f6ac1b866bc3d66777ea6340b9dfceea6e8460aa6f4860d\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		83F979CD1957347100AE1A06 /* Sources */ = {
@@ -748,6 +769,10 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"GA_TOKEN=\\\"UA-52514669-1\\\"",
+					"CC_TOKEN=\\\"35b943bcae32aead64bc43aeb248f73a9af0ed81\\\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,

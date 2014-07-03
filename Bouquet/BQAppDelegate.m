@@ -13,6 +13,10 @@
 #import "BQNotificationsManager.h"
 #import "BQAnalyticsManager.h"
 
+#if !DEBUG
+#import <Crashlytics/Crashlytics.h>
+#endif
+
 NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
 static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/";
@@ -22,6 +26,10 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 #pragma mark UIApplicationDelegate methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+#if !DEBUG
+    [Crashlytics startWithAPIKey:[NSString stringWithCString:CC_TOKEN encoding:NSUTF8StringEncoding]];
+#endif
+
     [[BQAnalyticsManager shareManager] initializeWithToken:[NSString stringWithCString:GA_TOKEN encoding:NSUTF8StringEncoding]];
 
     RKLogConfigureByName("RestKit/*", RKLogLevelWarning);
