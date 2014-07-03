@@ -42,6 +42,7 @@
 		8358F7BC19656247007B8201 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BB19656247007B8201 /* libz.dylib */; };
 		8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BD1965624F007B8201 /* libsqlite3.dylib */; };
 		8358F7C21965763A007B8201 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7C119657639007B8201 /* Crashlytics.framework */; };
+		8358F7C919657A9A007B8201 /* MWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 8358F7C519657A9A007B8201 /* MWLogging.m */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -156,6 +157,8 @@
 		8358F7BB19656247007B8201 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8358F7BD1965624F007B8201 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		8358F7C119657639007B8201 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		8358F7C419657A9A007B8201 /* MWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLogging.h; sourceTree = "<group>"; };
+		8358F7C519657A9A007B8201 /* MWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLogging.m; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -272,6 +275,7 @@
 		2F2E2A033D08B57F0D60C146 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				8358F7C319657A9A007B8201 /* MWLogging */,
 				8358F6E219655C4E007B8201 /* GoogleAnalyticsServicesiOS */,
 			);
 			path = Vendor;
@@ -404,6 +408,15 @@
 				8358F71919655C4E007B8201 /* GAITracker.h */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		8358F7C319657A9A007B8201 /* MWLogging */ = {
+			isa = PBXGroup;
+			children = (
+				8358F7C419657A9A007B8201 /* MWLogging.h */,
+				8358F7C519657A9A007B8201 /* MWLogging.m */,
+			);
+			path = MWLogging;
 			sourceTree = "<group>";
 		};
 		83F979C81957347000AE1A06 = {
@@ -612,6 +625,7 @@
 				2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */,
 				2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */,
 				2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */,
+				8358F7C919657A9A007B8201 /* MWLogging.m in Sources */,
 				2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */,
 				2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */,
 				831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */,
