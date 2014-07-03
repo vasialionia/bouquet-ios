@@ -9,7 +9,6 @@
 #import "BQComplimentView.h"
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
-#import "BQComplimentDatasource.h"
 
 @interface BQComplimentViewController()
 
@@ -32,6 +31,10 @@
 - (void)onComplimentTap:(UITapGestureRecognizer *)tapGestureRecognizer {
     self.currentComplient = [self.complimentDatasource getRandCompliment];
     self.view.complimentLabel.text = self.currentComplient.text;
+
+    if ([self.delegate respondsToSelector:@selector(complimentViewControllerDidTapCompliment:)]) {
+        [self.delegate complimentViewControllerDidTapCompliment:self];
+    }
 }
 
 #pragma mark UIViewController methods

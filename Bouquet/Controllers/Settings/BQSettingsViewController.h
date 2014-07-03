@@ -6,6 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BQSex.h"
 
 typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
     BQSettingsViewControllerLibraryRestKit
@@ -23,11 +24,16 @@ typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
 
 @end
 
-@protocol BQSettingsViewControllerDelegate
+@protocol BQSettingsViewControllerDelegate <NSObject>
 
 @required
 
 - (void)settingsViewControllerDidTapDone:(BQSettingsViewController *)settingsViewController;
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library;
+
+@optional
+
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didChangeNotificationsSettingsToValue:(BOOL)value;
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didChangeSexFrom:(BQSex)fromSex to:(BQSex)toSex;
 
 @end

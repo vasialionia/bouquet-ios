@@ -11,6 +11,7 @@
 #import "BQAppDelegate+Navigation.h"
 #import "BQObjectManager.h"
 #import "BQNotificationsManager.h"
+#import "BQAnalyticsManager.h"
 
 NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
@@ -21,6 +22,8 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 #pragma mark UIApplicationDelegate methods
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [[BQAnalyticsManager shareManager] initializeWithToken:[NSString stringWithCString:GA_TOKEN encoding:NSUTF8StringEncoding]];
+
     RKLogConfigureByName("RestKit/*", RKLogLevelWarning);
     BQObjectManager *objectManager = [BQObjectManager managerWithBaseURL:[NSURL URLWithString:BQBaseAPIURLString]];
     [BQObjectManager setSharedManager:objectManager];

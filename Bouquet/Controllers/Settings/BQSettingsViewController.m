@@ -38,11 +38,20 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 }
 
 - (void)onSegmentedControlValueChanged:(UISegmentedControl *)segmentedControl {
+    BQSex oldValue = self.settingsDatasource.sex;
     self.settingsDatasource.sex = (BQSex)segmentedControl.selectedSegmentIndex;
+
+    if ([self.delegate respondsToSelector:@selector(settingsViewController:didChangeSexFrom:to:)]) {
+        [self.delegate settingsViewController:self didChangeSexFrom:oldValue to:self.settingsDatasource.sex];
+    }
 }
 
 - (void)onSwitchControlValueChanged:(UISwitch *)switchControl {
     [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
+
+    if ([self.delegate respondsToSelector:@selector(settingsViewController:didChangeNotificationsSettingsToValue:)]) {
+        [self.delegate settingsViewController:self didChangeNotificationsSettingsToValue:self.notificationsDatasource.isNotificationsEnabled];
+    }
 }
 
 - (NSString *)getSexTitleForSex:(BQSex)sex {

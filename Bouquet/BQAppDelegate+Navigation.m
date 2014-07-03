@@ -10,6 +10,7 @@
 #import "BQLicenseViewController.h"
 #import "BQNotificationsManager.h"
 #import "BQCompliment.h"
+#import "BQAnalyticsManager.h"
 
 static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
@@ -18,12 +19,16 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 #pragma mark Private methods
 
 - (UIViewController *)createWelcomeViewController {
+    [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageWelcome];
+
     BQWelcomeViewController *welcomeViewController = [[BQWelcomeViewController alloc] init];
     welcomeViewController.delegate = self;
     return welcomeViewController;
 }
 
 - (UIViewController *)createComplimentViewController {
+    [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageCompliment];
+
     BQComplimentViewController *complimentViewController = [[BQComplimentViewController alloc] init];
     complimentViewController.delegate = self;
     complimentViewController.complimentDatasource = [BQObjectManager sharedManager];
@@ -31,6 +36,8 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 }
 
 - (UINavigationController *)createSettingsViewController {
+    [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageSettings];
+
     BQSettingsViewController *settingsViewController = [[BQSettingsViewController alloc] init];
     settingsViewController.delegate = self;
     settingsViewController.settingsDatasource = [BQObjectManager sharedManager];
@@ -40,6 +47,8 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 }
 
 - (UIViewController *)createLicenseViewControllerWithLicensePath:(NSString *)path {
+    [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageLicense];
+
     NSError *error = nil;
     NSString *license = [NSString stringWithContentsOfFile:path encoding:NSASCIIStringEncoding error:&error];
     if (error) {
@@ -80,6 +89,12 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^{
         [alert dismissWithClickedButtonIndex:0 animated:YES];
     });
+
+    [[BQAnalyticsManager shareManager] trackShareTap];
+}
+
+- (void)complimentViewControllerDidTapCompliment:(BQComplimentViewController *)complimentViewController {
+    [[BQAnalyticsManager shareManager] trackComplimentTap];
 }
 
 #pragma mark BQSettingsViewControllerDelegate protocol
@@ -98,6 +113,14 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     UIViewController *licenseViewController = [self createLicenseViewControllerWithLicensePath:licensePath];
     licenseViewController.title = @"RestKit";
     [(UINavigationController *)self.window.rootViewController pushViewController:licenseViewController animated:YES];
+}
+
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didChangeNotificationsSettingsToValue:(BOOL)value {
+    [[BQAnalyticsManager shareManager] trackNotificationsChangeToValue:value];
+}
+
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didChangeSexFrom:(BQSex)fromSex to:(BQSex)toSex {
+    [[BQAnalyticsManager shareManager] trackSexChangeFrom:fromSex to:toSex];
 }
 
 #pragma mark Interface methods

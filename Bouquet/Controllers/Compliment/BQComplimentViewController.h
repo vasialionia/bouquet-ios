@@ -20,11 +20,15 @@
 
 @end
 
-@protocol BQComplimentViewControllerDelegate
+@protocol BQComplimentViewControllerDelegate <NSObject>
 
 @required
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController;
 - (void)complimentViewController:(BQComplimentViewController *)complimentViewController didTapShareButtonForCompliment:(BQCompliment *)compliment;
+
+@optional
+
+- (void)complimentViewControllerDidTapCompliment:(BQComplimentViewController *)complimentViewController;
 
 @end

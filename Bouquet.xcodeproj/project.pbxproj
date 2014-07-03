@@ -25,6 +25,7 @@
 		2F2E2DF42E64E63790311919 /* BQBubblesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E26DD1BAEE5A77C734D8F /* BQBubblesView.m */; };
 		2F2E2DFF8064CC9DA598BD3C /* BQObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29AA8852751293D04F9E /* BQObjectManager.m */; };
 		2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */; };
+		2F2E2ED7F58C680336315FF5 /* BQAnalyticsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E25CCF2E1E9A8BFE83C29 /* BQAnalyticsManager.m */; };
 		2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */; };
 		2F2E2FEE74B1F402EE955057 /* infinite_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */; };
 		2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2436CE6E767F2F23E78D /* BQCompliment.m */; };
@@ -37,6 +38,9 @@
 		831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */; };
 		831B51AA196076980035BE47 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 831B51A9196076980035BE47 /* LICENSE */; };
 		8358F6D51964446A007B8201 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8358F6D71964446A007B8201 /* Localizable.strings */; };
+		8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */; };
+		8358F7BC19656247007B8201 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BB19656247007B8201 /* libz.dylib */; };
+		8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BD1965624F007B8201 /* libsqlite3.dylib */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -101,6 +105,7 @@
 		2F2E244B4E944658F221567C /* BQCompliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCompliment.h; sourceTree = "<group>"; };
 		2F2E246729EBEEF813345F9D /* BQNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQNotificationsManager.h; sourceTree = "<group>"; };
 		2F2E247BDD5E10DBF5C1618F /* BQComplimentDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentDatasource.h; sourceTree = "<group>"; };
+		2F2E25CCF2E1E9A8BFE83C29 /* BQAnalyticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQAnalyticsManager.m; sourceTree = "<group>"; };
 		2F2E25E348092194C9924A41 /* BQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSettingsViewController.m; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
 		2F2E26DD1BAEE5A77C734D8F /* BQBubblesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQBubblesView.m; sourceTree = "<group>"; };
@@ -126,6 +131,7 @@
 		2F2E2CB60EC71AA89E0A742E /* BQSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSex.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
 		2F2E2D894CB297F0CA6C7AB0 /* BQBluredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBluredView.h; sourceTree = "<group>"; };
+		2F2E2E7A0467778056E94083 /* BQAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAnalyticsManager.h; sourceTree = "<group>"; };
 		2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLicenseViewController.h; sourceTree = "<group>"; };
 		2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNotificationsManager.m; sourceTree = "<group>"; };
 		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
@@ -139,6 +145,15 @@
 		8358F6D419644456007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8358F6D61964446A007B8201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8358F6D81964446F007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8358F71019655C4E007B8201 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		8358F71119655C4E007B8201 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		8358F71619655C4E007B8201 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		8358F71719655C4E007B8201 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		8358F71819655C4E007B8201 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		8358F71919655C4E007B8201 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		8358F7BB19656247007B8201 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		8358F7BD1965624F007B8201 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -158,6 +173,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */,
+				8358F7BC19656247007B8201 /* libz.dylib in Frameworks */,
 				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
 				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
 				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
@@ -166,6 +183,7 @@
 				831B5184196048B50035BE47 /* libRestKit.a in Frameworks */,
 				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
 				83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */,
+				8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */,
 				83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +266,14 @@
 			path = Welcome;
 			sourceTree = "<group>";
 		};
+		2F2E2A033D08B57F0D60C146 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				8358F6E219655C4E007B8201 /* GoogleAnalyticsServicesiOS */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		2F2E2AFA4C28AD2756EA71AC /* Controls */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +295,8 @@
 				2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */,
 				2F2E246729EBEEF813345F9D /* BQNotificationsManager.h */,
 				2F2E2B920A7CFCDFA1B5E8CD /* BQNotificationsDataSource.h */,
+				2F2E25CCF2E1E9A8BFE83C29 /* BQAnalyticsManager.m */,
+				2F2E2E7A0467778056E94083 /* BQAnalyticsManager.h */,
 			);
 			path = Logic;
 			sourceTree = "<group>";
@@ -345,6 +373,36 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		8358F6E219655C4E007B8201 /* GoogleAnalyticsServicesiOS */ = {
+			isa = PBXGroup;
+			children = (
+				8358F6E319655C4E007B8201 /* GoogleAnalytics */,
+				8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */,
+			);
+			path = GoogleAnalyticsServicesiOS;
+			sourceTree = "<group>";
+		};
+		8358F6E319655C4E007B8201 /* GoogleAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				8358F70F19655C4E007B8201 /* Library */,
+			);
+			path = GoogleAnalytics;
+			sourceTree = "<group>";
+		};
+		8358F70F19655C4E007B8201 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				8358F71019655C4E007B8201 /* GAI.h */,
+				8358F71119655C4E007B8201 /* GAIDictionaryBuilder.h */,
+				8358F71619655C4E007B8201 /* GAIFields.h */,
+				8358F71719655C4E007B8201 /* GAILogger.h */,
+				8358F71819655C4E007B8201 /* GAITrackedViewController.h */,
+				8358F71919655C4E007B8201 /* GAITracker.h */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 		83F979C81957347000AE1A06 = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +424,8 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8358F7BD1965624F007B8201 /* libsqlite3.dylib */,
+				8358F7BB19656247007B8201 /* libz.dylib */,
 				831B5185196048B50035BE47 /* CFNetwork.framework */,
 				831B5186196048B50035BE47 /* CoreData.framework */,
 				831B5187196048B50035BE47 /* MobileCoreServices.framework */,
@@ -382,6 +442,7 @@
 		83F979DA1957347100AE1A06 /* Bouquet */ = {
 			isa = PBXGroup;
 			children = (
+				2F2E2A033D08B57F0D60C146 /* Vendor */,
 				2F2E22A592154752C689C6F9 /* Common */,
 				2F2E27312577718150E3D4A4 /* Extensions */,
 				2F2E2CD75B276BC105A22085 /* Logic */,
@@ -543,6 +604,7 @@
 				2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */,
 				2F2E2DF42E64E63790311919 /* BQBubblesView.m in Sources */,
 				2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */,
+				2F2E2ED7F58C680336315FF5 /* BQAnalyticsManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +663,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
+					"GA_TOKEN=\\\"UA-52514669-1\\\"",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -635,6 +698,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "GA_TOKEN=\\\"UA-52514669-1\\\"";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -663,6 +727,10 @@
 					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
 				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bouquet/Vendor/GoogleAnalyticsServicesiOS",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
@@ -687,6 +755,10 @@
 					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
 				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Bouquet/Vendor/GoogleAnalyticsServicesiOS",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-all_load",
