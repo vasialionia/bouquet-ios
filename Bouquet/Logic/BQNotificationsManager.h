@@ -8,6 +8,8 @@
 #import <Foundation/Foundation.h>
 #import "BQNotificationsDataSource.h"
 
+extern NSString *const BQNotificationsManagerKeyComplimentId;
+
 @protocol BQComplimentDatasource;
 
 @interface BQNotificationsManager : NSObject <

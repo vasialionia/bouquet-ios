@@ -26,12 +26,17 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     return welcomeViewController;
 }
 
-- (UIViewController *)createComplimentViewController {
+- (UIViewController *)createComplimentViewControllerWithComplimentId:(NSNumber *)complimentId {
     [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageCompliment];
 
     BQComplimentViewController *complimentViewController = [[BQComplimentViewController alloc] init];
     complimentViewController.delegate = self;
     complimentViewController.complimentDatasource = [BQObjectManager sharedManager];
+
+    if (complimentId != nil) {
+        complimentViewController.compliment = [[BQObjectManager sharedManager] getComplimentWithId:complimentId];
+    }
+
     return complimentViewController;
 }
 
@@ -69,7 +74,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQFirstRunKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
-    self.window.rootViewController = [self createComplimentViewController];
+    self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];
     [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
@@ -80,8 +85,8 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
-- (void)complimentViewController:(BQComplimentViewController *)complimentViewController didTapShareButtonForCompliment:(BQCompliment *)compliment {
-    [UIPasteboard generalPasteboard].string = compliment.text;
+- (void)complimentViewControllerDidTapShareButton:(BQComplimentViewController *)complimentViewController {
+    [UIPasteboard generalPasteboard].string = complimentViewController.compliment.text;
 
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Copied to clipboard", nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
     [alert show];
@@ -104,7 +109,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
         [[BQNotificationsManager sharedManager] renewNotifications];
     }
 
-    self.window.rootViewController = [self createComplimentViewController];
+    self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];
     [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
 }
 
@@ -125,8 +130,8 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
 #pragma mark Interface methods
 
-- (UIViewController *)createRootViewController {
-    return [self isFirstRun] ? [self createWelcomeViewController] : [self createComplimentViewController];
+- (UIViewController *)createRootViewControllerWithComplimentId:(NSNumber *)complimentId {
+    return [self isFirstRun] ? [self createWelcomeViewController] : [self createComplimentViewControllerWithComplimentId:complimentId];
 }
 
 @end

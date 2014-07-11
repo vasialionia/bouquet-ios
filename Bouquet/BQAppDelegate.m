@@ -40,8 +40,11 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 
     [BQNotificationsManager sharedManager].complimentDatasource = objectManager;
 
+    UILocalNotification *notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+    NSNumber *complimentId = notification.userInfo[BQNotificationsManagerKeyComplimentId];
+
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [self createRootViewController];
+    self.window.rootViewController = [self createRootViewControllerWithComplimentId:complimentId];
     [self.window makeKeyAndVisible];
 
     return YES;
@@ -52,6 +55,13 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 
     if ([BQNotificationsManager sharedManager].notificationsEnabled) {
         [[BQNotificationsManager sharedManager] renewNotifications];
+    }
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    if (application.applicationState == UIApplicationStateInactive) {
+        NSNumber *complimentId = notification.userInfo[BQNotificationsManagerKeyComplimentId];
+        self.window.rootViewController = [self createRootViewControllerWithComplimentId:complimentId];
     }
 }
 

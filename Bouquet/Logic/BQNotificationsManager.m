@@ -9,6 +9,8 @@
 #import "BQComplimentDatasource.h"
 #import "BQCompliment.h"
 
+NSString *const BQNotificationsManagerKeyComplimentId = @"BQNotificationsManagerKeyComplimentId";
+
 static NSUInteger const BQNotificationsManagerHourMin = 8;
 static NSUInteger const BQNotificationsManagerHourMax = 22;
 static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
@@ -28,11 +30,16 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
         dateComponents.hour = BQNotificationsManagerHourMin + arc4random() % (BQNotificationsManagerHourMax - BQNotificationsManagerHourMin + 1);
         dateComponents.minute = 0;
 
+        BQCompliment *compliment = [self.complimentDatasource getRandCompliment];
+
         UILocalNotification *localNotification = [[UILocalNotification alloc] init];
         localNotification.fireDate = [calendar dateFromComponents:dateComponents];
         localNotification.timeZone = [NSTimeZone defaultTimeZone];
-        localNotification.alertBody = [self.complimentDatasource getRandCompliment].text;
+        localNotification.alertBody = compliment.text;
         localNotification.alertAction = @":-)";
+        localNotification.userInfo = @{
+            BQNotificationsManagerKeyComplimentId: compliment.complimentId
+        };
 
         [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
     }

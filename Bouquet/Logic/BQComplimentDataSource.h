@@ -14,5 +14,6 @@
 @required
 
 - (BQCompliment *)getRandCompliment;
+- (BQCompliment *)getComplimentWithId:(NSNumber *)complimentId;
 
 @end

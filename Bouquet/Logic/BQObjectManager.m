@@ -197,10 +197,27 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
     return compliment;
 }
 
+- (BQCompliment *)getComplimentWithId:(NSNumber *)complimentId {
+    NSFetchRequest *complimentFetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Compliment"];
+    complimentFetchRequest.predicate = [NSPredicate predicateWithFormat:@"complimentId == %@", complimentId];
+
+    NSError *error = nil;
+    NSArray *compliments = [self.managedObjectStore.mainQueueManagedObjectContext executeFetchRequest:complimentFetchRequest error:&error];
+    if (error != nil) {
+        BQLogError(@"Can't fetch compliments. %@", error);
+        return nil;
+    }
+    if (compliments.count != 1) {
+        BQAssert(NO, @"Can't fetch exactly 1 compliment.");
+        return nil;
+    }
+
+    return compliments.firstObject;
+}
+
 #pragma mark BQSettingsDataSource protocol
 
-- (void)setSex:(BQSex)sex
-{
+- (void)setSex:(BQSex)sex {
     if (_sex != sex) {
         _sex = sex;
 

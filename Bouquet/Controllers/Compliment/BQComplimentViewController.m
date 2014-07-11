@@ -10,12 +10,6 @@
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
 
-@interface BQComplimentViewController()
-
-@property (nonatomic, strong) BQCompliment *currentComplient;
-
-@end
-
 @implementation BQComplimentViewController
 
 #pragma mark Private methods
@@ -25,12 +19,11 @@
 }
 
 - (void)onShareButtonClick:(UIButton *)button {
-    [self.delegate complimentViewController:self didTapShareButtonForCompliment:self.currentComplient];
+    [self.delegate complimentViewControllerDidTapShareButton:self];
 }
 
 - (void)onComplimentTap:(UITapGestureRecognizer *)tapGestureRecognizer {
-    self.currentComplient = [self.complimentDatasource getRandCompliment];
-    self.view.complimentLabel.text = self.currentComplient.text;
+    self.compliment = [self.complimentDatasource getRandCompliment];
 
     if ([self.delegate respondsToSelector:@selector(complimentViewControllerDidTapCompliment:)]) {
         [self.delegate complimentViewControllerDidTapCompliment:self];
@@ -63,8 +56,9 @@
     [self.view.infoButton addTarget:self action:@selector(onInfoButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.shareButton addTarget:self action:@selector(onShareButtonClick:) forControlEvents:UIControlEventTouchUpInside];
 
-    self.currentComplient = [self.complimentDatasource getRandCompliment];
-    self.view.complimentLabel.text = self.currentComplient.text;
+    if (self.compliment == nil) {
+        self.compliment = [self.complimentDatasource getRandCompliment];
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -86,6 +80,13 @@
         [self.view stopAnimation];
         [self.view startAnimation];
     }
+}
+
+#pragma mark Interface methods
+
+- (void)setCompliment:(BQCompliment *)compliment {
+    _compliment = compliment;
+    self.view.complimentLabel.text = _compliment.text;
 }
 
 @end

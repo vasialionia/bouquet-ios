@@ -15,6 +15,7 @@
 @interface BQComplimentViewController : UIViewController
 
 @property (nonatomic, strong) BQComplimentView *view;
+@property (nonatomic, strong) BQCompliment *compliment;
 @property (nonatomic, weak) id<BQComplimentViewControllerDelegate> delegate;
 @property (nonatomic, strong) id<BQComplimentDatasource> complimentDatasource;
 
@@ -25,7 +26,7 @@
 @required
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController;
-- (void)complimentViewController:(BQComplimentViewController *)complimentViewController didTapShareButtonForCompliment:(BQCompliment *)compliment;
+- (void)complimentViewControllerDidTapShareButton:(BQComplimentViewController *)complimentViewController;
 
 @optional
 
