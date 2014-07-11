@@ -16,6 +16,9 @@ NSString *const BQObjectManagerCompletionBlockKeyError = @"BQObjectManagerComple
 
 static NSString *const BQObjectManagerDefaultLangKey = @"en";
 static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
+static NSString *const BQObjectManagerUpdateDateKey = @"BQObjectManagerUpdateDateKey";
+
+static NSTimeInterval const BQObjectManagerUpdateInterval = 7.0f * 24.0f * 60.0f * 60.0f;
 
 @interface BQObjectManager ()
 
@@ -228,6 +231,13 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
 
 #pragma mark Interface methods
 
+- (void)updateComplimentsIfNeeded {
+    NSDate *lastUpdateDate = [[NSUserDefaults standardUserDefaults] objectForKey:BQObjectManagerUpdateDateKey];
+    if (lastUpdateDate == nil || [[NSDate date] timeIntervalSinceDate:lastUpdateDate] > BQObjectManagerUpdateInterval) {
+        [self updateComplimentsWithCompletionBlock:nil];
+    }
+}
+
 - (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock {
     [self getObject:nil path:@"compliment" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         [self initLangKey];
@@ -237,6 +247,9 @@ static NSString *const BQObjectManagerSexKey = @"BQObjectManagerSexKey";
                     BQObjectManagerCompletionBlockKeyResponse: mappingResult.array
             });
         }
+
+        [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:BQObjectManagerUpdateDateKey];
+        [[NSUserDefaults standardUserDefaults] synchronize];
     }
     failure:^(RKObjectRequestOperation *operation, NSError *error) {
         BQLogError(@"Error while getting compliments. %@", error);

@@ -51,7 +51,7 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[BQObjectManager sharedManager] updateComplimentsWithCompletionBlock:nil];
+    [[BQObjectManager sharedManager] updateComplimentsIfNeeded];
 
     if ([BQNotificationsManager sharedManager].notificationsEnabled) {
         [[BQNotificationsManager sharedManager] renewNotifications];

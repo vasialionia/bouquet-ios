@@ -23,6 +23,7 @@ typedef void (^BQObjectManagerCompletionBlock)(BOOL isSuccess, NSDictionary *inf
 
 @property (nonatomic, assign) BQSex sex;
 
+- (void)updateComplimentsIfNeeded;
 - (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock;
 
 @end
