@@ -240,7 +240,9 @@ static NSTimeInterval const BQObjectManagerUpdateInterval = 7.0f * 24.0f * 60.0f
 
 - (void)updateComplimentsWithCompletionBlock:(BQObjectManagerCompletionBlock)completionBlock {
     [self getObject:nil path:@"compliment" parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
-        [self initLangKey];
+        dispatch_sync(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [self initLangKey];
+        });
 
         if (completionBlock != nil) {
             completionBlock(YES, @{

@@ -15,7 +15,9 @@ static NSUInteger const BQNotificationsManagerHourMin = 8;
 static NSUInteger const BQNotificationsManagerHourMax = 22;
 static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
 
-@implementation BQNotificationsManager
+@implementation BQNotificationsManager {
+    dispatch_queue_t _queue;
+}
 
 #pragma mark Private methods
 
@@ -45,10 +47,24 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
     }
 }
 
+#pragma mark NSObject methods
+
+- (id)init {
+    self = [super init];
+    if (self != nil) {
+        _queue = dispatch_queue_create("by.vasialionia.bouquet.notificationsmanager", DISPATCH_QUEUE_SERIAL);
+    }
+    return nil;
+}
+
 #pragma mark BQNotificationsDataSource protocol
 
 - (BOOL)isNotificationsEnabled {
-    return [UIApplication sharedApplication].scheduledLocalNotifications.count > 0;
+    __block BOOL enabled = NO;
+    dispatch_sync(_queue, ^{
+        enabled = [UIApplication sharedApplication].scheduledLocalNotifications.count > 0;
+    });
+    return enabled;
 }
 
 - (void)setNotificationsEnabled:(BOOL)notificationsEnabled {
@@ -56,12 +72,14 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
         return;
     }
 
-    if (notificationsEnabled) {
-        [self scheduleNotifications];
-    }
-    else {
-        [[UIApplication sharedApplication] cancelAllLocalNotifications];
-    }
+    dispatch_async(_queue, ^{
+        if (notificationsEnabled) {
+            [self scheduleNotifications];
+        }
+        else {
+            [[UIApplication sharedApplication] cancelAllLocalNotifications];
+        }
+    });
 }
 
 #pragma mark Interface methods

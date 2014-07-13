@@ -105,9 +105,11 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 #pragma mark BQSettingsViewControllerDelegate protocol
 
 - (void)settingsViewControllerDidTapDone:(BQSettingsViewController *)settingsViewController {
-    if ([BQNotificationsManager sharedManager].notificationsEnabled) {
-        [[BQNotificationsManager sharedManager] renewNotifications];
-    }
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        if ([BQNotificationsManager sharedManager].notificationsEnabled) {
+            [[BQNotificationsManager sharedManager] renewNotifications];
+        }
+    });
 
     self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];
     [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
