@@ -15,6 +15,7 @@
 typedef NS_ENUM(NSUInteger, BQSettingsTableSections) {
     BQSettingsTableSectionsSettings,
     BQSettingsTableSectionsLincenses,
+    BQSettingsTableSectionsSourceCode,
     BQSettingsTableSectionsCount
 };
 
@@ -27,6 +28,12 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSettingsRows) {
 typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
     BQSettingsTableSectionLincensesRowsRestKit,
     BQSettingsTableSectionLincensesRowsCount
+};
+
+typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
+    BQSettingsTableSectionSourceCodeRowsIOS,
+    BQSettingsTableSectionSourceCodeRowsServer,
+    BQSettingsTableSectionSourceCodeRowsCount
 };
 
 @implementation BQSettingsViewController
@@ -103,6 +110,8 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
             return BQSettingsTableSectionSettingsRowsCount;
         case BQSettingsTableSectionsLincenses:
             return BQSettingsTableSectionLincensesRowsCount;
+        case BQSettingsTableSectionsSourceCode:
+            return BQSettingsTableSectionSourceCodeRowsCount;
         default:
             BQAssert(NO, @"Invalid section index.");
             return 0;
@@ -115,6 +124,8 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
             return NSLocalizedString(@"Settings", nil);
         case BQSettingsTableSectionsLincenses:
             return NSLocalizedString(@"3rd party libraries used", nil);
+        case BQSettingsTableSectionsSourceCode:
+            return NSLocalizedString(@"Source code", nil);
         default:
             BQAssert(NO, @"Invalid section index.");
             return nil;
@@ -172,6 +183,24 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                     BQAssert(NO, @"Invalid row index.");
                     return [[UITableViewCell alloc] init];
             }
+        case BQSettingsTableSectionsSourceCode:
+            switch(indexPath.row) {
+                case BQSettingsTableSectionSourceCodeRowsIOS: {
+                    UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.textLabel.text = @"iOS application";
+                    return cell;
+                }
+                case BQSettingsTableSectionSourceCodeRowsServer: {
+                    UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.textLabel.text = @"Web-server";
+                    return cell;
+                }
+                default:
+                    BQAssert(NO, @"Invalid row index.");
+                    return [[UITableViewCell alloc] init];
+            }
         default:
             BQAssert(NO, @"Invalid section index.");
             return [[UITableViewCell alloc] init];
@@ -190,6 +219,19 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
                 default:
                     break;
             }
+            break;
+        case BQSettingsTableSectionsSourceCode:
+            switch(indexPath.row) {
+                case BQSettingsTableSectionSourceCodeRowsIOS:
+                    [self.delegate settingsViewController:self didSelectSourceCode:BQSettingsViewControllerSourceCodeIOS];
+                    break;
+                case BQSettingsTableSectionSourceCodeRowsServer:
+                    [self.delegate settingsViewController:self didSelectSourceCode:BQSettingsViewControllerSourceCodeServer];
+                    break;
+                default:
+                    break;
+            }
+            [tableView deselectRowAtIndexPath:indexPath animated:YES];
             break;
         default:
             break;

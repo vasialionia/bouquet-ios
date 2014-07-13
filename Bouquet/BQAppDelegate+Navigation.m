@@ -122,6 +122,23 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     [(UINavigationController *)self.window.rootViewController pushViewController:licenseViewController animated:YES];
 }
 
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectSourceCode:(BQSettingsViewControllerSourceCode)sourceCode {
+    NSURL *url = nil;
+    switch (sourceCode) {
+        case BQSettingsViewControllerSourceCodeIOS:
+            url = [NSURL URLWithString:@"https://github.com/vasialionia/bouquet-ios"];
+            break;
+        case BQSettingsViewControllerSourceCodeServer:
+            url = [NSURL URLWithString:@"https://github.com/vasialionia/bouquet-api"];
+            break;
+        default:
+            BQAssert(NO, @"Unknown source code key. %d", (int)sourceCode);
+            url = [NSURL URLWithString:@"https://github.com/vasialionia"];
+            break;
+    }
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didChangeNotificationsSettingsToValue:(BOOL)value {
     [[BQAnalyticsManager shareManager] trackNotificationsChangeToValue:value];
 }

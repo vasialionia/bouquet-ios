@@ -12,6 +12,11 @@ typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
     BQSettingsViewControllerLibraryRestKit
 };
 
+typedef NS_ENUM(NSUInteger, BQSettingsViewControllerSourceCode) {
+    BQSettingsViewControllerSourceCodeIOS,
+    BQSettingsViewControllerSourceCodeServer
+};
+
 @protocol BQSettingsViewControllerDelegate;
 @protocol BQSettingsDatasource;
 @protocol BQNotificationsDataSource;
@@ -30,6 +35,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
 
 - (void)settingsViewControllerDidTapDone:(BQSettingsViewController *)settingsViewController;
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library;
+- (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectSourceCode:(BQSettingsViewControllerSourceCode)sourceCode;
 
 @optional
 
