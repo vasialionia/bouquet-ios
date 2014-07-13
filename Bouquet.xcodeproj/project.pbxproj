@@ -29,6 +29,7 @@
 		2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */; };
 		2F2E2FEE74B1F402EE955057 /* infinite_male@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E2314FB9089E1BE0892A4 /* infinite_male@2x.png */; };
 		2F2E2FF07E014CDB2831482E /* BQCompliment.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2436CE6E767F2F23E78D /* BQCompliment.m */; };
+		83115F4719731E09005A86AD /* BQButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 83115F4619731E09005A86AD /* BQButton.m */; };
 		831B5184196048B50035BE47 /* libRestKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B517B196048190035BE47 /* libRestKit.a */; };
 		831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5185196048B50035BE47 /* CFNetwork.framework */; };
 		831B518B196048B50035BE47 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5186196048B50035BE47 /* CoreData.framework */; };
@@ -136,6 +137,8 @@
 		2F2E2E7A0467778056E94083 /* BQAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAnalyticsManager.h; sourceTree = "<group>"; };
 		2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLicenseViewController.h; sourceTree = "<group>"; };
 		2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNotificationsManager.m; sourceTree = "<group>"; };
+		83115F4519731E09005A86AD /* BQButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQButton.h; sourceTree = "<group>"; };
+		83115F4619731E09005A86AD /* BQButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQButton.m; sourceTree = "<group>"; };
 		831B5173196048190035BE47 /* RestKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RestKit.xcodeproj; path = Submodules/RestKit/RestKit.xcodeproj; sourceTree = "<group>"; };
 		831B5185196048B50035BE47 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		831B5186196048B50035BE47 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -284,6 +287,8 @@
 		2F2E2AFA4C28AD2756EA71AC /* Controls */ = {
 			isa = PBXGroup;
 			children = (
+				83115F4519731E09005A86AD /* BQButton.h */,
+				83115F4619731E09005A86AD /* BQButton.m */,
 				2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */,
 				2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */,
 			);
@@ -625,6 +630,7 @@
 				2F2E2E95C84878D5C4648CBF /* BQAppDelegate+Navigation.m in Sources */,
 				2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */,
 				2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */,
+				83115F4719731E09005A86AD /* BQButton.m in Sources */,
 				8358F7C919657A9A007B8201 /* MWLogging.m in Sources */,
 				2F2E2C33AF735B6B0E38812E /* BQSettingsViewController.m in Sources */,
 				2F2E2D7A17E1FA245DDFF1BC /* UITableView+BQ.m in Sources */,
@@ -752,6 +758,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
@@ -771,6 +778,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -780,6 +788,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
@@ -803,6 +812,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
