@@ -75,9 +75,9 @@
     if (self) {
         self.backgroundColor = [UIColor whiteColor];
 
-        self.minRadius = 40.0f;
+        self.minRadius = 60.0f;
         self.maxRadius = 150.0f;
-        self.density = 0.0002f;
+        self.density = 0.00007f;
         self.minSpeed = 4.0f;
         self.maxSpeed = 8.0f;
 
