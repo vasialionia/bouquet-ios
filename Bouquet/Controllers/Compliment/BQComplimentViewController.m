@@ -9,6 +9,7 @@
 #import "BQComplimentView.h"
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
+#import "BQButton.h"
 
 @implementation BQComplimentViewController
 

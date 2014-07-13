@@ -6,12 +6,13 @@
 //
 
 #import "BQComplimentView.h"
+#import "BQButton.h"
 
 @interface BQComplimentView ()
 
 @property (nonatomic, strong, readwrite) UILabel *complimentLabel;
-@property (nonatomic, strong, readwrite) UIButton *infoButton;
-@property (nonatomic, strong, readwrite) UIButton *shareButton;
+@property (nonatomic, strong, readwrite) BQButton *infoButton;
+@property (nonatomic, strong, readwrite) BQButton *shareButton;
 
 @end
 
@@ -33,7 +34,8 @@
 }
 
 - (void)initInfoButton {
-    self.infoButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.infoButton = [[BQButton alloc] initWithFrame:CGRectZero];
+    self.infoButton.tapEdgeInsets = UIEdgeInsetsMake(-20.0f, -20.0f, -20.0f, -20.0f);
     self.infoButton.backgroundColor = [UIColor clearColor];
     self.infoButton.layer.cornerRadius = 15.0f;
     self.infoButton.layer.borderWidth = 1.0f;
@@ -49,7 +51,8 @@
 }
 
 - (void)initShareButton {
-    self.shareButton = [[UIButton alloc] initWithFrame:CGRectZero];
+    self.shareButton = [[BQButton alloc] initWithFrame:CGRectZero];
+    self.shareButton.tapEdgeInsets = UIEdgeInsetsMake(-20.0f, -20.0f, -20.0f, -20.0f);
     self.shareButton.backgroundColor = [UIColor clearColor];
     self.shareButton.layer.cornerRadius = 15.0f;
     self.shareButton.layer.borderWidth = 1.0f;
