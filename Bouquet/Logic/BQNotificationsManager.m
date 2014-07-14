@@ -22,8 +22,6 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
 #pragma mark Private methods
 
 - (void)scheduleNotifications {
-    BQAssert(!self.notificationsEnabled, @"Notifications are already scheduled.");
-
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
 
     for (NSUInteger i = 0; i < BQNotificationsManagerNotificationsCount; i ++) {
@@ -54,7 +52,7 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
     if (self != nil) {
         _queue = dispatch_queue_create("by.vasialionia.bouquet.notificationsmanager", DISPATCH_QUEUE_SERIAL);
     }
-    return nil;
+    return self;
 }
 
 #pragma mark BQNotificationsDataSource protocol

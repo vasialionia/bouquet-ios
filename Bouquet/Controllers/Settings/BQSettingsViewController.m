@@ -54,7 +54,9 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
 }
 
 - (void)onSwitchControlValueChanged:(UISwitch *)switchControl {
-    [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
+    });
 
     if ([self.delegate respondsToSelector:@selector(settingsViewController:didChangeNotificationsSettingsToValue:)]) {
         [self.delegate settingsViewController:self didChangeNotificationsSettingsToValue:self.notificationsDatasource.isNotificationsEnabled];
