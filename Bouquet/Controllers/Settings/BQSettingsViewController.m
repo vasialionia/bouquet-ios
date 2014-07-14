@@ -190,13 +190,13 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
                 case BQSettingsTableSectionSourceCodeRowsIOS: {
                     UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.textLabel.text = @"iOS application";
+                    cell.textLabel.text = NSLocalizedString(@"iOS application", nil);
                     return cell;
                 }
                 case BQSettingsTableSectionSourceCodeRowsServer: {
                     UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.textLabel.text = @"Web-server";
+                    cell.textLabel.text = NSLocalizedString(@"Web-server", nil);
                     return cell;
                 }
                 default:
