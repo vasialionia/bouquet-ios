@@ -762,6 +762,12 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"GA_TOKEN=\\\"UA-52514669-1\\\"",
+					"API_URL=\\\"http://dev-vlbouquet.rhcloud.com/\\\"",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
@@ -788,13 +794,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Leanid Kukharau (4E98R7VAZZ)";
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"GA_TOKEN=\\\"UA-52514669-1\\\"",
 					"CC_TOKEN=\\\"35b943bcae32aead64bc43aeb248f73a9af0ed81\\\"",
+					"API_URL=\\\"http://prod-vlbouquet.rhcloud.com/\\\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -812,7 +819,7 @@
 					"-all_load",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B0810D04-D363-48EF-8B14-F83B6FC94968";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

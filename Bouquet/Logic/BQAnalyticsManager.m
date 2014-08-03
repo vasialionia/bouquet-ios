@@ -24,7 +24,8 @@ typedef NS_ENUM(NSUInteger, BQAnalyticsManagerCustomDimension) {
     BQAnalyticsManagerCustomDimensionAppRun = 3,
     BQAnalyticsManagerCustomDimensionTimeSinceLastRun = 4,
     BQAnalyticsManagerCustomDimensionNotificationsChanges = 5,
-    BQAnalyticsManagerCustomDimensionSexChanges = 6
+    BQAnalyticsManagerCustomDimensionSexChanges = 6,
+    BQAnalyticsManagerCustomDimensionDebug = 7
 };
 
 @interface BQAnalyticsManager ()
@@ -48,6 +49,11 @@ typedef NS_ENUM(NSUInteger, BQAnalyticsManagerCustomDimension) {
     [[GAI sharedInstance].defaultTracker set:[GAIFields customDimensionForIndex:BQAnalyticsManagerCustomDimensionTimeSinceLastRun] value:[NSString stringWithFormat:@"%f", self.timeSinceLastRun]];
     [[GAI sharedInstance].defaultTracker set:[GAIFields customDimensionForIndex:BQAnalyticsManagerCustomDimensionNotificationsChanges] value:[NSString stringWithFormat:@"%lu", (unsigned long)self.notificationsChangesCount]];
     [[GAI sharedInstance].defaultTracker set:[GAIFields customDimensionForIndex:BQAnalyticsManagerCustomDimensionSexChanges] value:[NSString stringWithFormat:@"%lu", (unsigned long)self.sexChangesCount]];
+#if DEBUG
+    [[GAI sharedInstance].defaultTracker set:[GAIFields customDimensionForIndex:BQAnalyticsManagerCustomDimensionDebug] value:@"yes"];
+#else
+    [[GAI sharedInstance].defaultTracker set:[GAIFields customDimensionForIndex:BQAnalyticsManagerCustomDimensionDebug] value:@"no"];
+#endif
 }
 
 - (NSString *)getPageName:(BQAnalyticsManagerPage)page {

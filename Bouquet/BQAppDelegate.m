@@ -19,8 +19,6 @@
 
 NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
-static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/";
-
 @implementation BQAppDelegate
 
 #pragma mark UIApplicationDelegate methods
@@ -33,7 +31,7 @@ static NSString *const BQBaseAPIURLString = @"http://dev-vlbouquet.rhcloud.com/"
     [[BQAnalyticsManager shareManager] initializeWithToken:[NSString stringWithCString:GA_TOKEN encoding:NSUTF8StringEncoding]];
 
     RKLogConfigureByName("RestKit/*", RKLogLevelWarning);
-    BQObjectManager *objectManager = [BQObjectManager managerWithBaseURL:[NSURL URLWithString:BQBaseAPIURLString]];
+    BQObjectManager *objectManager = [BQObjectManager managerWithBaseURL:[NSURL URLWithString:[NSString stringWithCString:API_URL encoding:NSUTF8StringEncoding]]];
     [BQObjectManager setSharedManager:objectManager];
 
     [AFNetworkActivityIndicatorManager sharedManager].enabled = YES;
