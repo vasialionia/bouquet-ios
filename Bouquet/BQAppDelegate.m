@@ -63,6 +63,12 @@ NSString *const BQFirstRunKey = @"BQFirstRunKey";
     }
 }
 
+- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        [BQNotificationsManager sharedManager].notificationsEnabled = YES;
+    });
+}
+
 #pragma mark Interface methods
 
 - (BOOL)isFirstRun {

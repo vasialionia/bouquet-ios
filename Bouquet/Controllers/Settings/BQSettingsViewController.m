@@ -54,9 +54,15 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
 }
 
 - (void)onSwitchControlValueChanged:(UISwitch *)switchControl {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
-    });
+    if (switchControl.on && !self.notificationsDatasource.canEnableNotifications) {
+        [[[UIAlertView alloc] initWithTitle:nil message:NSLocalizedString(@"Enable notifications for the app in the device settings", nil) delegate:nil cancelButtonTitle:nil otherButtonTitles:@"OK", nil] show];
+        [switchControl setOn:NO animated:YES];
+    }
+    else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+            [self.notificationsDatasource setNotificationsEnabled:switchControl.on];
+        });
+    }
 
     if ([self.delegate respondsToSelector:@selector(settingsViewController:didChangeNotificationsSettingsToValue:)]) {
         [self.delegate settingsViewController:self didChangeNotificationsSettingsToValue:self.notificationsDatasource.isNotificationsEnabled];

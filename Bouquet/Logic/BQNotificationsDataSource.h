@@ -14,6 +14,7 @@
 
 @required
 
+- (BOOL)canEnableNotifications;
 - (BOOL)isNotificationsEnabled;
 - (void)setNotificationsEnabled:(BOOL)enabled;
 

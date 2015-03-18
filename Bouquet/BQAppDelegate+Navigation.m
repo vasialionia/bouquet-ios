@@ -69,7 +69,13 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
 - (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSex:(BQSex)sex {
     [BQObjectManager sharedManager].sex = sex;
-    [BQNotificationsManager sharedManager].notificationsEnabled = YES;
+
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert categories:nil]];
+    }
+    else {
+        [BQNotificationsManager sharedManager].notificationsEnabled = YES;
+    }
 
     [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQFirstRunKey];
     [[NSUserDefaults standardUserDefaults] synchronize];

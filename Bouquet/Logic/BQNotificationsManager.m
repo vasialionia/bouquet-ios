@@ -57,6 +57,15 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
 
 #pragma mark BQNotificationsDataSource protocol
 
+- (BOOL)canEnableNotifications {
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(currentUserNotificationSettings)]) {
+        if (([[UIApplication sharedApplication] currentUserNotificationSettings].types & UIUserNotificationTypeAlert) != UIUserNotificationTypeAlert) {
+            return NO;
+        }
+    }
+    return YES;
+}
+
 - (BOOL)isNotificationsEnabled {
     __block BOOL enabled = NO;
     dispatch_sync(_queue, ^{
@@ -71,7 +80,7 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
     }
 
     dispatch_async(_queue, ^{
-        if (notificationsEnabled) {
+        if (notificationsEnabled && [self canEnableNotifications]) {
             [self scheduleNotifications];
         }
         else {

@@ -701,11 +701,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-					"GA_TOKEN=\\\"UA-52514669-1\\\"",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "DEBUG=1";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -739,7 +735,7 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "GA_TOKEN=\\\"UA-52514669-1\\\"";
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -765,7 +761,7 @@
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
-					"GA_TOKEN=\\\"UA-52514669-1\\\"",
+					"GA_TOKEN=\\\"\\\"",
 					"API_URL=\\\"http://dev-vlbouquet.rhcloud.com/\\\"",
 				);
 				HEADER_SEARCH_PATHS = (
@@ -802,6 +798,7 @@
 					"GA_TOKEN=\\\"UA-52514669-1\\\"",
 					"CC_TOKEN=\\\"35b943bcae32aead64bc43aeb248f73a9af0ed81\\\"",
 					"API_URL=\\\"http://prod-vlbouquet.rhcloud.com/\\\"",
+					"$(inherited)",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
