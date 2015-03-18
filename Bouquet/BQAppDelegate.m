@@ -45,6 +45,10 @@ NSString *const BQFirstRunKey = @"BQFirstRunKey";
     self.window.rootViewController = [self createRootViewControllerWithComplimentId:complimentId];
     [self.window makeKeyAndVisible];
 
+    if ([[UIApplication sharedApplication] respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+        [[UIApplication sharedApplication] registerUserNotificationSettings:[UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeAlert categories:nil]];
+    }
+
     return YES;
 }
 
@@ -61,12 +65,6 @@ NSString *const BQFirstRunKey = @"BQFirstRunKey";
         NSNumber *complimentId = notification.userInfo[BQNotificationsManagerKeyComplimentId];
         self.window.rootViewController = [self createRootViewControllerWithComplimentId:complimentId];
     }
-}
-
-- (void)application:(UIApplication *)application didRegisterUserNotificationSettings:(UIUserNotificationSettings *)notificationSettings {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        [BQNotificationsManager sharedManager].notificationsEnabled = YES;
-    });
 }
 
 #pragma mark Interface methods
