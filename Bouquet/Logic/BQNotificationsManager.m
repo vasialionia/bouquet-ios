@@ -84,6 +84,10 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
             [self scheduleNotifications];
         }
         else {
+            /*
+             The method seems to work async on iOS 8. The second call forces sync execution.
+             */
+            [[UIApplication sharedApplication] cancelAllLocalNotifications];
             [[UIApplication sharedApplication] cancelAllLocalNotifications];
         }
     });
