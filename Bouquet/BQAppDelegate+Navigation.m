@@ -11,6 +11,7 @@
 #import "BQNotificationsManager.h"
 #import "BQCompliment.h"
 #import "BQAnalyticsManager.h"
+#import "UIColor+BQ.h"
 
 static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
@@ -18,12 +19,18 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
 #pragma mark Private methods
 
+- (void)customizeNavigationControllerAppearance {
+    [[UINavigationBar appearance] setBarTintColor:[UIColor bqMainColor]];
+    [[UINavigationBar appearance] setTranslucent:NO];
+}
+
 - (UIViewController *)createWelcomeViewController {
     [[BQAnalyticsManager shareManager] trackPageView:BQAnalyticsManagerPageWelcome];
 
     BQWelcomeViewController *welcomeViewController = [[BQWelcomeViewController alloc] init];
     welcomeViewController.delegate = self;
-    return welcomeViewController;
+    UINavigationController *welcomeNavigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
+    return welcomeNavigationController;
 }
 
 - (UIViewController *)createComplimentViewControllerWithComplimentId:(NSNumber *)complimentId {
@@ -74,7 +81,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
         [BQNotificationsManager sharedManager].notificationsEnabled = YES;
     });
 
-    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQFirstRunKey];
+    [[NSUserDefaults standardUserDefaults] setBool:YES forKey:BQAppDelegateIsFirstRunKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];

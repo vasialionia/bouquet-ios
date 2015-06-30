@@ -17,7 +17,7 @@
 #import <Crashlytics/Crashlytics.h>
 #endif
 
-NSString *const BQFirstRunKey = @"BQFirstRunKey";
+NSString *const BQAppDelegateIsFirstRunKey = @"BQAppDelegateIsFirstRunKey";
 
 @implementation BQAppDelegate
 
@@ -40,6 +40,8 @@ NSString *const BQFirstRunKey = @"BQFirstRunKey";
 
     UILocalNotification *notification = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
     NSNumber *complimentId = notification.userInfo[BQNotificationsManagerKeyComplimentId];
+
+    [self customizeNavigationControllerAppearance];
 
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.rootViewController = [self createRootViewControllerWithComplimentId:complimentId];
@@ -70,7 +72,7 @@ NSString *const BQFirstRunKey = @"BQFirstRunKey";
 #pragma mark Interface methods
 
 - (BOOL)isFirstRun {
-    return ![[NSUserDefaults standardUserDefaults] boolForKey:BQFirstRunKey];
+    return ![[NSUserDefaults standardUserDefaults] boolForKey:BQAppDelegateIsFirstRunKey];
 }
 
 @end

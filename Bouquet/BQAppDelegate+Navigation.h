@@ -10,6 +10,7 @@
 
 @interface BQAppDelegate (Navigation)
 
+- (void)customizeNavigationControllerAppearance;
 - (UIViewController *)createRootViewControllerWithComplimentId:(NSNumber *)complimentId;
 
 @end

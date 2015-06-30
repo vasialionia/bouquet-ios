@@ -11,7 +11,7 @@
 #import "BQComplimentViewController.h"
 #import "BQSettingsViewController.h"
 
-extern NSString *const BQFirstRunKey;
+extern NSString *const BQAppDelegateIsFirstRunKey;
 
 @interface BQAppDelegate : UIResponder <
     UIApplicationDelegate,
@@ -21,7 +21,6 @@ extern NSString *const BQFirstRunKey;
 >
 
 @property (nonatomic, strong) UIWindow *window;
-
-- (BOOL)isFirstRun;
+@property (nonatomic, assign, readonly) BOOL isFirstRun;
 
 @end

@@ -8,7 +8,6 @@
 
 #import "BQWelcomeViewController.h"
 #import "BQWelcomeView.h"
-#import "BQInfiniteButton.h"
 
 @implementation BQWelcomeViewController
 
@@ -22,9 +21,6 @@
     }
     else if (button == self.view.femaleButton) {
         sex = BQSexFemale;
-    }
-    else if (button == self.view.otherButton) {
-        sex = BQSexOther;
     }
     else {
         BQAssert(NO, @"Unknown button tapped.");
@@ -46,7 +42,8 @@
 
     [self.view.maleButton addTarget:self action:@selector(onButtonTap:) forControlEvents:UIControlEventTouchUpInside];
     [self.view.femaleButton addTarget:self action:@selector(onButtonTap:) forControlEvents:UIControlEventTouchUpInside];
-    [self.view.otherButton addTarget:self action:@selector(onButtonTap:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.title = NSLocalizedString(@"U R Awesome", nil);
 }
 
 @end

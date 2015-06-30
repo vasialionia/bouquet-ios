@@ -5,14 +5,11 @@
 // Copyright (c) 2014 vasialionia. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BQBackgroundView.h"
 
-@class BQInfiniteButton;
+@interface BQWelcomeView : BQBackgroundView
 
-@interface BQWelcomeView : UIView
-
-@property (nonatomic, strong, readonly) BQInfiniteButton *maleButton;
-@property (nonatomic, strong, readonly) BQInfiniteButton *femaleButton;
-@property (nonatomic, strong, readonly) UIButton *otherButton;
+@property (nonatomic, strong, readonly) UIButton *maleButton;
+@property (nonatomic, strong, readonly) UIButton *femaleButton;
 
 @end

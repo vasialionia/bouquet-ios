@@ -9,11 +9,13 @@
 /* Begin PBXBuildFile section */
 		2F2E203894049E337956AEA1 /* BQTableViewCellWithSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */; };
 		2F2E205C08DAEF8C6D493DAE /* BQWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */; };
-		2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */; };
 		2F2E2303518B3A35F5B04E3C /* BQComplimentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */; };
 		2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */; };
+		2F2E24985151A2D618567515 /* BQBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E23B855979AC2EA64F88C /* BQBackgroundView.m */; };
 		2F2E2500B495CD483E4359AD /* BQComplimentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */; };
 		2F2E27AB61103973DB8CE775 /* bouquet.sqlite_backup in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */; };
+		2F2E27AB994904A226ECD10B /* UIColor+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E23F91BD29F7FBB8422F0 /* UIColor+BQ.m */; };
+		2F2E28523A9033BBBCA96E2E /* UIFont+BQ.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E283C27F588EBAFDE587F /* UIFont+BQ.m */; };
 		2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E22E712BB10D448D4E4A3 /* BQLicenseViewController.m */; };
 		2F2E2AB6E99A42EB2A28647E /* BQWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */; };
 		2F2E2B385DF07B9DA5E590FC /* infinite_female@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F2E23E9F1DB0D29D851D394 /* infinite_female@2x.png */; };
@@ -92,7 +94,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQInfiniteButton.h; sourceTree = "<group>"; };
 		2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+BQ.h"; sourceTree = "<group>"; };
 		2F2E20E856753F4EED578CA0 /* BQBubblesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBubblesView.h; sourceTree = "<group>"; };
 		2F2E20E90C4349A5AA496954 /* BQSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSettingsViewController.h; sourceTree = "<group>"; };
@@ -101,13 +102,17 @@
 		2F2E231FE5E1DEC378CCDA92 /* BQComplimentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentView.m; sourceTree = "<group>"; };
 		2F2E233CBEFA2CA59B93D600 /* BQComplimentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQComplimentViewController.m; sourceTree = "<group>"; };
 		2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+BQ.m"; sourceTree = "<group>"; };
+		2F2E23B855979AC2EA64F88C /* BQBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQBackgroundView.m; sourceTree = "<group>"; };
 		2F2E23DCEF017FDAEF16D5B6 /* BQInfiniteView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQInfiniteView.m; sourceTree = "<group>"; };
 		2F2E23E9F1DB0D29D851D394 /* infinite_female@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infinite_female@2x.png"; sourceTree = "<group>"; };
+		2F2E23F91BD29F7FBB8422F0 /* UIColor+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BQ.m"; sourceTree = "<group>"; };
 		2F2E2404E064CF7EE73D5592 /* BQWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeView.h; sourceTree = "<group>"; };
 		2F2E2436CE6E767F2F23E78D /* BQCompliment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQCompliment.m; sourceTree = "<group>"; };
 		2F2E244B4E944658F221567C /* BQCompliment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQCompliment.h; sourceTree = "<group>"; };
+		2F2E2461C1F00DFCD00B16DA /* UIColor+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BQ.h"; sourceTree = "<group>"; };
 		2F2E246729EBEEF813345F9D /* BQNotificationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQNotificationsManager.h; sourceTree = "<group>"; };
 		2F2E247BDD5E10DBF5C1618F /* BQComplimentDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentDatasource.h; sourceTree = "<group>"; };
+		2F2E249AEB66B48BF97DD967 /* UIFont+BQ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+BQ.h"; sourceTree = "<group>"; };
 		2F2E25CCF2E1E9A8BFE83C29 /* BQAnalyticsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQAnalyticsManager.m; sourceTree = "<group>"; };
 		2F2E25E348092194C9924A41 /* BQSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQSettingsViewController.m; sourceTree = "<group>"; };
 		2F2E2685C17ED8E666937BA5 /* BQMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQMacro.h; sourceTree = "<group>"; };
@@ -115,6 +120,7 @@
 		2F2E27A71D05264F667F45FE /* bouquet.sqlite_backup */ = {isa = PBXFileReference; lastKnownFileType = file.sqlite; path = bouquet.sqlite_backup; sourceTree = "<group>"; };
 		2F2E27E6C5C362A406EEDF9B /* BQComplimentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQComplimentView.h; sourceTree = "<group>"; };
 		2F2E2808F5A0ACF4D01F96F9 /* BQTableViewCellWithSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSegmentedControl.m; sourceTree = "<group>"; };
+		2F2E283C27F588EBAFDE587F /* UIFont+BQ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+BQ.m"; sourceTree = "<group>"; };
 		2F2E287AF724D8640F0C30AF /* BQInfiniteView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQInfiniteView.h; sourceTree = "<group>"; };
 		2F2E29362B425DD95D28A529 /* BQWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeViewController.m; sourceTree = "<group>"; };
 		2F2E294571253F357B028F89 /* BQAppDelegate+Navigation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BQAppDelegate+Navigation.m"; sourceTree = "<group>"; };
@@ -123,7 +129,6 @@
 		2F2E29BEB2852E38CE083BC8 /* BQTableViewCellWithSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSwitch.h; sourceTree = "<group>"; };
 		2F2E29F86D0A5F84E4629FE9 /* BQWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQWelcomeView.m; sourceTree = "<group>"; };
 		2F2E2B0778FFC37DA2A46C46 /* BQTableViewCellWithSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQTableViewCellWithSegmentedControl.h; sourceTree = "<group>"; };
-		2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQInfiniteButton.m; sourceTree = "<group>"; };
 		2F2E2B25310E382EB6215EE4 /* BQWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQWelcomeViewController.h; sourceTree = "<group>"; };
 		2F2E2B32F31753A76470A573 /* BQAppDelegate+Navigation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BQAppDelegate+Navigation.h"; sourceTree = "<group>"; };
 		2F2E2B38E5C8767E469C7546 /* BQObjectManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQObjectManager.h; sourceTree = "<group>"; };
@@ -134,6 +139,7 @@
 		2F2E2CB60EC71AA89E0A742E /* BQSex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQSex.h; sourceTree = "<group>"; };
 		2F2E2CE23B4BF591EBD5AA42 /* BQTableViewCellWithSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQTableViewCellWithSwitch.m; sourceTree = "<group>"; };
 		2F2E2D894CB297F0CA6C7AB0 /* BQBluredView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBluredView.h; sourceTree = "<group>"; };
+		2F2E2E54D868D8EA1E29CA43 /* BQBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQBackgroundView.h; sourceTree = "<group>"; };
 		2F2E2E7A0467778056E94083 /* BQAnalyticsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQAnalyticsManager.h; sourceTree = "<group>"; };
 		2F2E2FA46BF5B7D836BBFD29 /* BQLicenseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BQLicenseViewController.h; sourceTree = "<group>"; };
 		2F2E2FD13F6056A1743DDBE9 /* BQNotificationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BQNotificationsManager.m; sourceTree = "<group>"; };
@@ -173,7 +179,6 @@
 		83F979E31957347100AE1A06 /* BQAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BQAppDelegate.h; sourceTree = "<group>"; };
 		83F979E41957347100AE1A06 /* BQAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BQAppDelegate.m; sourceTree = "<group>"; };
 		83F979E61957347100AE1A06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		83F979ED1957347100AE1A06 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +247,10 @@
 			children = (
 				2F2E20CBC0FA9E4ED7406869 /* UITableView+BQ.h */,
 				2F2E239C94BBB20E2D35281B /* UITableView+BQ.m */,
+				2F2E23F91BD29F7FBB8422F0 /* UIColor+BQ.m */,
+				2F2E2461C1F00DFCD00B16DA /* UIColor+BQ.h */,
+				2F2E283C27F588EBAFDE587F /* UIFont+BQ.m */,
+				2F2E249AEB66B48BF97DD967 /* UIFont+BQ.h */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,8 +298,6 @@
 			children = (
 				83115F4519731E09005A86AD /* BQButton.h */,
 				83115F4619731E09005A86AD /* BQButton.m */,
-				2F2E2B1EBEBAEB7E23F204EB /* BQInfiniteButton.m */,
-				2F2E205F96A3586B2FB2B462 /* BQInfiniteButton.h */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -342,6 +349,8 @@
 				2F2E20E856753F4EED578CA0 /* BQBubblesView.h */,
 				2F2E2BCB94ACF42AE135C70A /* BQBluredView.m */,
 				2F2E2D894CB297F0CA6C7AB0 /* BQBluredView.h */,
+				2F2E23B855979AC2EA64F88C /* BQBackgroundView.m */,
+				2F2E2E54D868D8EA1E29CA43 /* BQBackgroundView.h */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -456,7 +465,6 @@
 				83F979D41957347100AE1A06 /* Foundation.framework */,
 				83F979D61957347100AE1A06 /* CoreGraphics.framework */,
 				83F979D81957347100AE1A06 /* UIKit.framework */,
-				83F979ED1957347100AE1A06 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -642,10 +650,12 @@
 				2F2E28578201B7329F97E702 /* BQLicenseViewController.m in Sources */,
 				2F2E2365BC970D066185BE83 /* BQNotificationsManager.m in Sources */,
 				2F2E2B61D02010513F30F308 /* BQInfiniteView.m in Sources */,
-				2F2E221443F7DAABDDB75645 /* BQInfiniteButton.m in Sources */,
 				2F2E2DF42E64E63790311919 /* BQBubblesView.m in Sources */,
 				2F2E2FBFDD1337A436CE9B02 /* BQBluredView.m in Sources */,
 				2F2E2ED7F58C680336315FF5 /* BQAnalyticsManager.m in Sources */,
+				2F2E24985151A2D618567515 /* BQBackgroundView.m in Sources */,
+				2F2E27AB994904A226ECD10B /* UIColor+BQ.m in Sources */,
+				2F2E28523A9033BBBCA96E2E /* UIFont+BQ.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
