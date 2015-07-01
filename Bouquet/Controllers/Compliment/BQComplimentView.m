@@ -6,11 +6,13 @@
 //
 
 #import "BQComplimentView.h"
+#import "BQBubbleView.h"
+#import "UIColor+BQ.h"
 
 @interface BQComplimentView ()
 
-@property (nonatomic, strong) UIImageView *complimentBubble;
-@property (nonatomic, strong, readwrite) UILabel *complimentLabel;
+@property (nonatomic, strong) BQBubbleView *complimentBubble;
+@property (nonatomic, strong, readwrite) BQLabel *complimentLabel;
 @property (nonatomic, strong, readwrite) UIImageView *friendImageView;
 
 @end
@@ -20,10 +22,8 @@
 #pragma mark Private methods
 
 - (void)initComplimentBubble {
-    UIImage *bubbleImage = [UIImage imageNamed:@"Message"];
-    bubbleImage = [bubbleImage resizableImageWithCapInsets:UIEdgeInsetsMake(30.0f, 30.0f, 50.0f, 60.0f)];
-
-    self.complimentBubble = [[UIImageView alloc] initWithImage:bubbleImage];
+    self.complimentBubble = [[BQBubbleView alloc] init];
+    self.complimentBubble.backgroundColor = [UIColor bqMainColor];
 
     self.complimentBubble.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.complimentBubble];
@@ -33,7 +33,7 @@
 }
 
 - (void)initComplimentLabel {
-    self.complimentLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+    self.complimentLabel = [[BQLabel alloc] init];
     self.complimentLabel.numberOfLines = 0;
     self.complimentLabel.textAlignment = NSTextAlignmentCenter;
     self.complimentLabel.font = [UIFont fontWithName:@"HelveticaNeue" size:20.0f];

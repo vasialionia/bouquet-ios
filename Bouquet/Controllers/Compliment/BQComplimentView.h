@@ -6,10 +6,11 @@
 //
 
 #import "BQBackgroundView.h"
+#import "BQLabel.h"
 
 @interface BQComplimentView : BQBackgroundView
 
-@property (nonatomic, strong, readonly) UILabel *complimentLabel;
+@property (nonatomic, strong, readonly) BQLabel *complimentLabel;
 @property (nonatomic, strong, readonly) UIImageView *friendImageView;
 
 @end

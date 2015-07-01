@@ -130,9 +130,25 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
 }
 
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
-    NSString *licensePath = [[NSBundle mainBundle] pathForResource:@"RestKitLicense" ofType:nil];
+    NSString *licenseFileName;
+    NSString *title;
+    switch (library) {
+        case BQSettingsViewControllerLibraryRestKit:
+            licenseFileName = @"RestKitLicense";
+            title = @"RestKit";
+            break;
+        case BQSettingsViewControllerLibraryYetiCharacterLabel:
+            licenseFileName = @"YetiCharacterLabelLicense";
+            title = @"YetiCharacterLabel";
+            break;
+        default:
+            BQAssert(NO, @"Unknown library key. %d", (int)library);
+            licenseFileName = nil;
+            break;
+    }
+    NSString *licensePath = [[NSBundle mainBundle] pathForResource:licenseFileName ofType:nil];
     UIViewController *licenseViewController = [self createLicenseViewControllerWithLicensePath:licensePath];
-    licenseViewController.title = @"RestKit";
+    licenseViewController.title = title;
     [settingsViewController.navigationController pushViewController:licenseViewController animated:YES];
 }
 

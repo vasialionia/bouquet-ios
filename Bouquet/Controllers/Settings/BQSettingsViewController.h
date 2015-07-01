@@ -9,7 +9,8 @@
 #import "BQSex.h"
 
 typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
-    BQSettingsViewControllerLibraryRestKit
+    BQSettingsViewControllerLibraryRestKit,
+    BQSettingsViewControllerLibraryYetiCharacterLabel
 };
 
 typedef NS_ENUM(NSUInteger, BQSettingsViewControllerSourceCode) {

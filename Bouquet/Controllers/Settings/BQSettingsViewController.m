@@ -27,6 +27,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSettingsRows) {
 
 typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
     BQSettingsTableSectionLincensesRowsRestKit,
+    BQSettingsTableSectionLincensesRowsYetiCharacterLabel,
     BQSettingsTableSectionLincensesRowsCount
 };
 
@@ -185,6 +186,12 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
                     cell.textLabel.text = @"RestKit";
                     return cell;
                 }
+                case BQSettingsTableSectionLincensesRowsYetiCharacterLabel: {
+                    UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.textLabel.text = @"YetiCharacterLabelLicense";
+                    return cell;
+                }
                 default:
                     BQAssert(NO, @"Invalid row index.");
                     return [[UITableViewCell alloc] init];
@@ -221,6 +228,9 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
             switch(indexPath.row) {
                 case BQSettingsTableSectionLincensesRowsRestKit:
                     [self.delegate settingsViewController:self didSelectLibrary:BQSettingsViewControllerLibraryRestKit];
+                    break;
+                case BQSettingsTableSectionLincensesRowsYetiCharacterLabel:
+                    [self.delegate settingsViewController:self didSelectLibrary:BQSettingsViewControllerLibraryYetiCharacterLabel];
                     break;
                 default:
                     break;

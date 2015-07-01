@@ -73,7 +73,11 @@
 
 - (void)setCompliment:(BQCompliment *)compliment {
     _compliment = compliment;
-    self.view.complimentLabel.text = _compliment.text;
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionAllowAnimatedContent animations:^{
+        self.view.complimentLabel.text = _compliment.text;
+        [self.view layoutIfNeeded];
+    } completion:nil];
 }
 
 @end
