@@ -10,5 +10,6 @@
 @interface BQComplimentView : BQBackgroundView
 
 @property (nonatomic, strong, readonly) UILabel *complimentLabel;
+@property (nonatomic, strong, readonly) UIImageView *friendImageView;
 
 @end

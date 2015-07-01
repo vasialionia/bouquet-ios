@@ -9,6 +9,7 @@
 #import "BQComplimentView.h"
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
+#import "BQSettingsDatasource.h"
 
 @implementation BQComplimentViewController
 
@@ -49,6 +50,22 @@
 
     if (self.compliment == nil) {
         self.compliment = [self.complimentDatasource getRandCompliment];
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    switch (self.settingsDatasource.sex) {
+        case BQSexMale:
+            self.view.friendImageView.image = [UIImage imageNamed:@"Girl"];
+            break;
+        case BQSexFemale:
+            self.view.friendImageView.image = [UIImage imageNamed:@"Boy"];
+            break;
+        default:
+            BQAssert(NO, @"Unknown sex key. %d", (int)self.settingsDatasource.sex);
+            self.view.friendImageView.image = [UIImage imageNamed:@"Girl"];
     }
 }
 

@@ -22,7 +22,10 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
 - (void)customizeNavigationControllerAppearance {
     [[UINavigationBar appearance] setBarTintColor:[UIColor bqMainColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-    [[UINavigationBar appearance] setTranslucent:NO];
+
+    if ([[UINavigationBar appearance] respondsToSelector:@selector(setTranslucent:)]) {
+        [[UINavigationBar appearance] setTranslucent:NO];
+    }
 }
 
 - (UIViewController *)createWelcomeViewController {
@@ -40,6 +43,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
     BQComplimentViewController *complimentViewController = [[BQComplimentViewController alloc] init];
     complimentViewController.delegate = self;
     complimentViewController.complimentDatasource = [BQObjectManager sharedManager];
+    complimentViewController.settingsDatasource = [BQObjectManager sharedManager];
 
     if (complimentId != nil) {
         complimentViewController.compliment = [[BQObjectManager sharedManager] getComplimentWithId:complimentId];

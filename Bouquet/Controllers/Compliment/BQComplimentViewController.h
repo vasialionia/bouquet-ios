@@ -8,9 +8,10 @@
 #import <Foundation/Foundation.h>
 
 @class BQComplimentView;
+@class BQCompliment;
 @protocol BQComplimentViewControllerDelegate;
 @protocol BQComplimentDatasource;
-@class BQCompliment;
+@protocol BQSettingsDatasource;
 
 @interface BQComplimentViewController : UIViewController
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) BQCompliment *compliment;
 @property (nonatomic, weak) id<BQComplimentViewControllerDelegate> delegate;
 @property (nonatomic, strong) id<BQComplimentDatasource> complimentDatasource;
+@property (nonatomic, strong) id<BQSettingsDatasource> settingsDatasource;
 
 @end
 
