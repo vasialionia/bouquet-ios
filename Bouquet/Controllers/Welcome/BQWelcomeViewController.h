@@ -21,6 +21,8 @@
 
 @protocol BQWelcomeViewControllerDelegate
 
+@required
+
 - (void)welcomeViewController:(BQWelcomeViewController *)welcomeViewController didSelectSex:(BQSex)sex;
 
 @end

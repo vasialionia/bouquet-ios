@@ -78,8 +78,6 @@ typedef NS_ENUM(NSUInteger, BQAnalyticsManagerCustomDimension) {
             return @"m";
         case BQSexFemale:
             return @"f";
-        case BQSexOther:
-            return @"mf";
         default:
             BQAssert(NO, @"Unknown sex key. %d", (int)sex);
             return @"?";

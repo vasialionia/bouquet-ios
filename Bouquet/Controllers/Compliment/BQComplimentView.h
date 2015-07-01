@@ -5,15 +5,10 @@
 // Copyright (c) 2014 vasialionia. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import "BQBubblesView.h"
+#import "BQBackgroundView.h"
 
-@class BQButton;
-
-@interface BQComplimentView : BQBubblesView
+@interface BQComplimentView : BQBackgroundView
 
 @property (nonatomic, strong, readonly) UILabel *complimentLabel;
-@property (nonatomic, strong, readonly) BQButton *infoButton;
-@property (nonatomic, strong, readonly) BQButton *shareButton;
 
 @end

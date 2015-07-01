@@ -13,7 +13,7 @@
 #import "BQAnalyticsManager.h"
 #import "UIColor+BQ.h"
 
-static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
+static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
 
 @implementation BQAppDelegate (Navigation)
 
@@ -21,6 +21,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
 
 - (void)customizeNavigationControllerAppearance {
     [[UINavigationBar appearance] setBarTintColor:[UIColor bqMainColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
     [[UINavigationBar appearance] setTranslucent:NO];
 }
 
@@ -44,7 +45,8 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
         complimentViewController.compliment = [[BQObjectManager sharedManager] getComplimentWithId:complimentId];
     }
 
-    return complimentViewController;
+    UINavigationController *complimentNavigationController = [[UINavigationController alloc] initWithRootViewController:complimentViewController];
+    return complimentNavigationController;
 }
 
 - (UINavigationController *)createSettingsViewController {
@@ -85,14 +87,13 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
     [[NSUserDefaults standardUserDefaults] synchronize];
 
     self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];
-    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
+    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:nil];
 }
 
 #pragma mark BQComplimentViewControllerDelegate protocol
 
 - (void)complimentViewControllerDidTapInfoButton:(BQComplimentViewController *)complimentViewController {
-    self.window.rootViewController = [self createSettingsViewController];
-    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
+    [complimentViewController presentViewController:[self createSettingsViewController] animated:YES completion:nil];
 }
 
 - (void)complimentViewControllerDidTapShareButton:(BQComplimentViewController *)complimentViewController {
@@ -121,15 +122,14 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.7f;
         }
     });
 
-    self.window.rootViewController = [self createComplimentViewControllerWithComplimentId:nil];
-    [UIView transitionWithView:self.window duration:BQFlipAnimationDuration options:UIViewAnimationOptionTransitionFlipFromLeft animations:nil completion:nil];
+    [settingsViewController.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectLibrary:(BQSettingsViewControllerLibrary)library {
     NSString *licensePath = [[NSBundle mainBundle] pathForResource:@"RestKitLicense" ofType:nil];
     UIViewController *licenseViewController = [self createLicenseViewControllerWithLicensePath:licensePath];
     licenseViewController.title = @"RestKit";
-    [(UINavigationController *)self.window.rootViewController pushViewController:licenseViewController animated:YES];
+    [settingsViewController.navigationController pushViewController:licenseViewController animated:YES];
 }
 
 - (void)settingsViewController:(BQSettingsViewController *)settingsViewController didSelectSourceCode:(BQSettingsViewControllerSourceCode)sourceCode {

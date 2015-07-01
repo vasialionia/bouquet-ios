@@ -9,6 +9,5 @@ typedef NS_ENUM(NSUInteger, BQSex) {
     BQSexFirst,
     BQSexMale = BQSexFirst,
     BQSexFemale,
-    BQSexOther,
-    BQSexLast = BQSexOther
+    BQSexLast = BQSexFemale
 };

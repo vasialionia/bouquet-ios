@@ -75,8 +75,6 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
             return @"♂";
         case BQSexFemale:
             return @"♀";
-        case BQSexOther:
-            return @"?";
         default:
             BQAssert(NO, @"Unknown sex key. %d", (int)sex);
             return @"?";

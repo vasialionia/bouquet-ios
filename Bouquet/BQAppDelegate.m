@@ -55,7 +55,9 @@ NSString *const BQAppDelegateIsFirstRunKey = @"BQAppDelegateIsFirstRunKey";
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-    [[BQObjectManager sharedManager] updateComplimentsIfNeeded];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+        [[BQObjectManager sharedManager] updateComplimentsIfNeeded];
+    });
 
     if ([BQNotificationsManager sharedManager].notificationsEnabled) {
         [[BQNotificationsManager sharedManager] renewNotifications];

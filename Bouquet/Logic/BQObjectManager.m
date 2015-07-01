@@ -133,8 +133,6 @@ static NSTimeInterval const BQObjectManagerUpdateInterval = 7.0f * 24.0f * 60.0f
             return @"m";
         case BQSexFemale:
             return @"f";
-        case BQSexOther:
-            return @"fm";
         default:
             BQAssert(NO, @"Unknown sex key. %d", (int)self.sex);
             return @"fm";
