@@ -52,12 +52,13 @@
     self.topHelpLabel = [[UILabel alloc] init];
     self.topHelpLabel.text = NSLocalizedString(@"Choose your gender", nil);
     self.topHelpLabel.font = [UIFont bqLightFontOfSize:18.0f];
+    self.topHelpLabel.textAlignment = NSTextAlignmentCenter;
 
     self.topHelpLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.topHelpLabel];
 
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[_topHelpLabel]-20-|" options:(NSLayoutFormatOptions)0 metrics:nil views:NSDictionaryOfVariableBindings(_topHelpLabel)]];
     [self addConstraints:@[
-            [NSLayoutConstraint constraintWithItem:self.topHelpLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f],
             [NSLayoutConstraint constraintWithItem:self.topHelpLabel attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeTop multiplier:1.0f constant:40.0f]
     ]];
 }
@@ -66,12 +67,14 @@
     self.bottomHelpLabel = [[UILabel alloc] init];
     self.bottomHelpLabel.text = NSLocalizedString(@"Help us customize content", nil);
     self.bottomHelpLabel.font = [UIFont bqLightFontOfSize:18.0f];
+    self.bottomHelpLabel.textAlignment = NSTextAlignmentCenter;
+    self.bottomHelpLabel.numberOfLines = 0;
 
     self.bottomHelpLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.bottomHelpLabel];
 
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-20-[_bottomHelpLabel]-20-|" options:(NSLayoutFormatOptions)0 metrics:nil views:NSDictionaryOfVariableBindings(_bottomHelpLabel)]];
     [self addConstraints:@[
-            [NSLayoutConstraint constraintWithItem:self.bottomHelpLabel attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeCenterX multiplier:1.0f constant:0.0f],
             [NSLayoutConstraint constraintWithItem:self.bottomHelpLabel attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0f constant:-20.0f]
     ]];
 }

@@ -15,7 +15,8 @@ typedef NS_ENUM(NSUInteger, BQSettingsViewControllerLibrary) {
 
 typedef NS_ENUM(NSUInteger, BQSettingsViewControllerSourceCode) {
     BQSettingsViewControllerSourceCodeIOS,
-    BQSettingsViewControllerSourceCodeServer
+    BQSettingsViewControllerSourceCodeServer,
+    BQSettingsViewControllerSourceCodeDesign
 };
 
 @protocol BQSettingsViewControllerDelegate;

@@ -34,6 +34,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionLincensesRows) {
 typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
     BQSettingsTableSectionSourceCodeRowsIOS,
     BQSettingsTableSectionSourceCodeRowsServer,
+    BQSettingsTableSectionSourceCodeRowsDesign,
     BQSettingsTableSectionSourceCodeRowsCount
 };
 
@@ -132,7 +133,7 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
         case BQSettingsTableSectionsLincenses:
             return NSLocalizedString(@"3rd party libraries used", nil);
         case BQSettingsTableSectionsSourceCode:
-            return NSLocalizedString(@"Source code", nil);
+            return NSLocalizedString(@"Source", nil);
         default:
             BQAssert(NO, @"Invalid section index.");
             return nil;
@@ -201,13 +202,19 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
                 case BQSettingsTableSectionSourceCodeRowsIOS: {
                     UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.textLabel.text = NSLocalizedString(@"iOS application", nil);
+                    cell.textLabel.text = NSLocalizedString(@"iOS application source code", nil);
                     return cell;
                 }
                 case BQSettingsTableSectionSourceCodeRowsServer: {
                     UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
                     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                    cell.textLabel.text = NSLocalizedString(@"Web-server", nil);
+                    cell.textLabel.text = NSLocalizedString(@"Web-server source code", nil);
+                    return cell;
+                }
+                case BQSettingsTableSectionSourceCodeRowsDesign: {
+                    UITableViewCell *cell = [tableView cellOfClass:[UITableViewCell class]];
+                    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.textLabel.text = NSLocalizedString(@"Graphical design", nil);
                     return cell;
                 }
                 default:
@@ -243,6 +250,9 @@ typedef NS_ENUM(NSUInteger, BQSettingsTableSectionSourceCodeRows) {
                     break;
                 case BQSettingsTableSectionSourceCodeRowsServer:
                     [self.delegate settingsViewController:self didSelectSourceCode:BQSettingsViewControllerSourceCodeServer];
+                    break;
+                case BQSettingsTableSectionSourceCodeRowsDesign:
+                    [self.delegate settingsViewController:self didSelectSourceCode:BQSettingsViewControllerSourceCodeDesign];
                     break;
                 default:
                     break;

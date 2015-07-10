@@ -2,18 +2,16 @@
 /* Localization file */
 
 
-"MALE" = "ПАРЕНЬ";
-"FEMALE" = "ДЕВУШКА";
-"IT'S A SECRET :-)" = "ЭТО СЕКРЕТ :-)";
 "Copied to clipboard" = "Скопировано";
 "Settings" = "Настройки";
 "Sex" = "Пол";
 "Notifications" = "Уведомления";
 "3rd party libraries used" = "Лицензии";
-"Source code" = "Исходный код";
-"iOS application" = "iOS приложение";
-"Web-server" = "Web-сервер";
 "Enable notifications for the app in the device settings" = "Включите уведомления для приложения в настройках устройства";
 "U R Awesome" = "U R Awesome";
-"Choose your gender" = "Choose your gender";
-"Help us customize content" = "Help us customize content";
+"Choose your gender" = "Кто вы?";
+"Help us customize content" = "Помогите нам подобрать комплименты";
+"Source" = "Исходники";
+"Graphical design" = "Графический дизайн";
+"iOS application source code" = "Исходный код iOS приложения";
+"Web-server source code" = "Исходный код web-сервера";

@@ -22,10 +22,6 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
 - (void)customizeNavigationControllerAppearance {
     [[UINavigationBar appearance] setBarTintColor:[UIColor bqMainColor]];
     [[UINavigationBar appearance] setTintColor:[UIColor blackColor]];
-
-    if ([[UINavigationBar appearance] respondsToSelector:@selector(setTranslucent:)]) {
-        [[UINavigationBar appearance] setTranslucent:NO];
-    }
 }
 
 - (UIViewController *)createWelcomeViewController {
@@ -34,6 +30,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
     BQWelcomeViewController *welcomeViewController = [[BQWelcomeViewController alloc] init];
     welcomeViewController.delegate = self;
     UINavigationController *welcomeNavigationController = [[UINavigationController alloc] initWithRootViewController:welcomeViewController];
+    welcomeNavigationController.navigationBar.translucent = NO;
     return welcomeNavigationController;
 }
 
@@ -50,6 +47,7 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
     }
 
     UINavigationController *complimentNavigationController = [[UINavigationController alloc] initWithRootViewController:complimentViewController];
+    complimentNavigationController.navigationBar.translucent = NO;
     return complimentNavigationController;
 }
 
@@ -160,6 +158,9 @@ static NSTimeInterval const BQFlipAnimationDuration = 0.3f;
             break;
         case BQSettingsViewControllerSourceCodeServer:
             url = [NSURL URLWithString:@"https://github.com/vasialionia/bouquet-api"];
+            break;
+        case BQSettingsViewControllerSourceCodeDesign:
+            url = [NSURL URLWithString:@"https://github.com/vasialionia/bouquet-design"];
             break;
         default:
             BQAssert(NO, @"Unknown source code key. %d", (int)sourceCode);

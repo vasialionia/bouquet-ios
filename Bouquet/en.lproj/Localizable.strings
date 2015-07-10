@@ -2,18 +2,16 @@
 /* Localization file */
 
 
-"MALE" = "MALE";
-"FEMALE" = "FEMALE";
-"IT'S A SECRET :-)" = "IT'S A SECRET :-)";
 "Copied to clipboard" = "Copied to clipboard";
 "Settings" = "Settings";
 "Sex" = "Sex";
 "Notifications" = "Notifications";
 "3rd party libraries used" = "3rd party libraries used";
-"Source code" = "Source code";
-"iOS application" = "iOS application";
-"Web-server" = "Web-server";
 "Enable notifications for the app in the device settings" = "Enable notifications for the app in the device settings";
 "U R Awesome" = "U R Awesome";
 "Choose your gender" = "Choose your gender";
 "Help us customize content" = "Help us customize content";
+"Source" = "Source";
+"Graphical design" = "Graphical design";
+"iOS application source code" = "iOS application source code";
+"Web-server source code" = "Web-server source code";
