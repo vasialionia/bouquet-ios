@@ -75,11 +75,12 @@ static NSUInteger const BQNotificationsManagerNotificationsCount = 64;
 }
 
 - (void)setNotificationsEnabled:(BOOL)notificationsEnabled {
-    if (self.notificationsEnabled == notificationsEnabled) {
-        return;
-    }
-
     dispatch_async(_queue, ^{
+        BOOL enabled = [UIApplication sharedApplication].scheduledLocalNotifications.count > 0;
+        if (enabled == notificationsEnabled) {
+            return;
+        }
+
         if (notificationsEnabled && [self canEnableNotifications]) {
             [self scheduleNotifications];
         }
