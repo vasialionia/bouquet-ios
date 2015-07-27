@@ -42,7 +42,6 @@
 		8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */; };
 		8358F7BC19656247007B8201 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BB19656247007B8201 /* libz.dylib */; };
 		8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BD1965624F007B8201 /* libsqlite3.dylib */; };
-		8358F7C21965763A007B8201 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7C119657639007B8201 /* Crashlytics.framework */; };
 		8358F7C919657A9A007B8201 /* MWLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = 8358F7C519657A9A007B8201 /* MWLogging.m */; };
 		837CDD791B44857F005E1BA3 /* YetiCharacterLabelLicense in Resources */ = {isa = PBXBuildFile; fileRef = 837CDD781B44857F005E1BA3 /* YetiCharacterLabelLicense */; };
 		837CDD911B4486B5005E1BA3 /* YETICharacterLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD841B4486B5005E1BA3 /* YETICharacterLabel.m */; };
@@ -50,6 +49,8 @@
 		837CDD931B4486B5005E1BA3 /* YETIFallingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8A1B4486B5005E1BA3 /* YETIFallingLabel.m */; };
 		837CDD941B4486B5005E1BA3 /* YETILayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */; };
 		837CDD951B4486B5005E1BA3 /* YETIMotionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */; };
+		83E59CE41B66328400F28333 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E59CE21B66328400F28333 /* Crashlytics.framework */; };
+		83E59CE51B66328400F28333 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E59CE31B66328400F28333 /* Fabric.framework */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -165,7 +166,6 @@
 		8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		8358F7BB19656247007B8201 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8358F7BD1965624F007B8201 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		8358F7C119657639007B8201 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8358F7C419657A9A007B8201 /* MWLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWLogging.h; sourceTree = "<group>"; };
 		8358F7C519657A9A007B8201 /* MWLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWLogging.m; sourceTree = "<group>"; };
 		837CDD781B44857F005E1BA3 /* YetiCharacterLabelLicense */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = YetiCharacterLabelLicense; sourceTree = "<group>"; };
@@ -179,6 +179,8 @@
 		837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETILayerAnimation.m; sourceTree = "<group>"; };
 		837CDD8F1B4486B5005E1BA3 /* YETIMotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YETIMotionLabel.h; sourceTree = "<group>"; };
 		837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETIMotionLabel.m; sourceTree = "<group>"; };
+		83E59CE21B66328400F28333 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		83E59CE31B66328400F28333 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,11 +201,12 @@
 			files = (
 				8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */,
 				8358F7BC19656247007B8201 /* libz.dylib in Frameworks */,
-				8358F7C21965763A007B8201 /* Crashlytics.framework in Frameworks */,
+				83E59CE41B66328400F28333 /* Crashlytics.framework in Frameworks */,
 				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
 				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
 				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
 				831B518D196048B50035BE47 /* Security.framework in Frameworks */,
+				83E59CE51B66328400F28333 /* Fabric.framework in Frameworks */,
 				831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */,
 				831B5184196048B50035BE47 /* libRestKit.a in Frameworks */,
 				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
@@ -513,7 +516,8 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8358F7C119657639007B8201 /* Crashlytics.framework */,
+				83E59CE21B66328400F28333 /* Crashlytics.framework */,
+				83E59CE31B66328400F28333 /* Fabric.framework */,
 				8358F7BD1965624F007B8201 /* libsqlite3.dylib */,
 				8358F7BB19656247007B8201 /* libz.dylib */,
 				831B5185196048B50035BE47 /* CFNetwork.framework */,
@@ -681,7 +685,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n./Crashlytics.framework/run 35b943bcae32aead64bc43aeb248f73a9af0ed81 9b3d77f435e6b9855f6ac1b866bc3d66777ea6340b9dfceea6e8460aa6f4860d\nfi";
+			shellScript = "if [[ \"$CONFIGURATION\" == \"Release\" ]]; then\n./Fabric.framework/run 35b943bcae32aead64bc43aeb248f73a9af0ed81 9b3d77f435e6b9855f6ac1b866bc3d66777ea6340b9dfceea6e8460aa6f4860d\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -831,7 +835,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
 					"GA_TOKEN=\\\"\\\"",
 					"API_URL=\\\"http://dev-vlbouquet.rhcloud.com/\\\"",
@@ -868,8 +871,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Bouquet/Bouquet-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"GA_TOKEN=\\\"UA-52514669-1\\\"",
-					"CC_TOKEN=\\\"35b943bcae32aead64bc43aeb248f73a9af0ed81\\\"",
+					"GA_TOKEN=\\\"\\\"",
 					"API_URL=\\\"http://prod-vlbouquet.rhcloud.com/\\\"",
 					"$(inherited)",
 				);

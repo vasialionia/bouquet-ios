@@ -14,6 +14,7 @@
 #import "BQAnalyticsManager.h"
 
 #if !DEBUG
+#import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 #endif
 
@@ -25,7 +26,7 @@ NSString *const BQAppDelegateIsFirstRunKey = @"BQAppDelegateIsFirstRunKey";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 #if !DEBUG
-    [Crashlytics startWithAPIKey:[NSString stringWithCString:CC_TOKEN encoding:NSUTF8StringEncoding]];
+    [Fabric with:@[CrashlyticsKit]];
 #endif
 
     [[BQAnalyticsManager shareManager] initializeWithToken:[NSString stringWithCString:GA_TOKEN encoding:NSUTF8StringEncoding]];
