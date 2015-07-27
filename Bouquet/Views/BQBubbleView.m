@@ -38,6 +38,10 @@
 }
 
 - (void)drawRect:(CGRect)rect {
+    if (CGRectGetWidth(self.bounds) < 50.0f || CGRectGetHeight(self.bounds) < 70.0f) {
+        return;
+    }
+
     CGFloat tailHeight = 30.0f;
     CGRect bodyRect = CGRectMake(0.0f, 0.0f, CGRectGetWidth(self.bounds), CGRectGetHeight(self.bounds) - tailHeight);
 

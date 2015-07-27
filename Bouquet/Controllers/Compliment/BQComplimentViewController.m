@@ -9,7 +9,6 @@
 #import "BQComplimentView.h"
 #import "BQObjectManager.h"
 #import "BQCompliment.h"
-#import "BQSettingsDatasource.h"
 
 @implementation BQComplimentViewController
 
@@ -29,6 +28,18 @@
     if ([self.delegate respondsToSelector:@selector(complimentViewControllerDidTapCompliment:)]) {
         [self.delegate complimentViewControllerDidTapCompliment:self];
     }
+}
+
+- (void)updateComplimentViewIfNeeded {
+    if (!self.view.window) {
+        return;
+    }
+
+    [self.view layoutIfNeeded];
+    [UIView animateWithDuration:0.3f delay:0.3f options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionAllowAnimatedContent animations:^{
+        self.view.complimentLabel.text = _compliment.text;
+        [self.view layoutIfNeeded];
+    } completion:nil];
 }
 
 #pragma mark UIViewController methods
@@ -69,15 +80,16 @@
     }
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    [self updateComplimentViewIfNeeded];
+}
+
 #pragma mark Interface methods
 
 - (void)setCompliment:(BQCompliment *)compliment {
     _compliment = compliment;
-    [self.view layoutIfNeeded];
-    [UIView animateWithDuration:0.3f delay:0.0f options:UIViewAnimationOptionCurveEaseIn | UIViewAnimationOptionAllowAnimatedContent animations:^{
-        self.view.complimentLabel.text = _compliment.text;
-        [self.view layoutIfNeeded];
-    } completion:nil];
+    [self updateComplimentViewIfNeeded];
 }
 
 @end
