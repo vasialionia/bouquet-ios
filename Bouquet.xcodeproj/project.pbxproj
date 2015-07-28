@@ -49,8 +49,8 @@
 		837CDD931B4486B5005E1BA3 /* YETIFallingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8A1B4486B5005E1BA3 /* YETIFallingLabel.m */; };
 		837CDD941B4486B5005E1BA3 /* YETILayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */; };
 		837CDD951B4486B5005E1BA3 /* YETIMotionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */; };
-		83E59CE41B66328400F28333 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E59CE21B66328400F28333 /* Crashlytics.framework */; };
-		83E59CE51B66328400F28333 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83E59CE31B66328400F28333 /* Fabric.framework */; };
+		83A35F071B69013700B1EADB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A35F051B69013700B1EADB /* Crashlytics.framework */; };
+		83A35F081B69013700B1EADB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A35F061B69013700B1EADB /* Fabric.framework */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -179,9 +179,9 @@
 		837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETILayerAnimation.m; sourceTree = "<group>"; };
 		837CDD8F1B4486B5005E1BA3 /* YETIMotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YETIMotionLabel.h; sourceTree = "<group>"; };
 		837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETIMotionLabel.m; sourceTree = "<group>"; };
-		83E59CE21B66328400F28333 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		83E59CE31B66328400F28333 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		83F979D11957347100AE1A06 /* Bouquet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bouquet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		83A35F051B69013700B1EADB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		83A35F061B69013700B1EADB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		83F979D11957347100AE1A06 /* U R Awesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U R Awesome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		83F979D81957347100AE1A06 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -201,12 +201,12 @@
 			files = (
 				8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */,
 				8358F7BC19656247007B8201 /* libz.dylib in Frameworks */,
-				83E59CE41B66328400F28333 /* Crashlytics.framework in Frameworks */,
+				83A35F071B69013700B1EADB /* Crashlytics.framework in Frameworks */,
 				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
 				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
 				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
 				831B518D196048B50035BE47 /* Security.framework in Frameworks */,
-				83E59CE51B66328400F28333 /* Fabric.framework in Frameworks */,
+				83A35F081B69013700B1EADB /* Fabric.framework in Frameworks */,
 				831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */,
 				831B5184196048B50035BE47 /* libRestKit.a in Frameworks */,
 				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
@@ -508,7 +508,7 @@
 		83F979D21957347100AE1A06 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				83F979D11957347100AE1A06 /* Bouquet.app */,
+				83F979D11957347100AE1A06 /* U R Awesome.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -516,8 +516,8 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83E59CE21B66328400F28333 /* Crashlytics.framework */,
-				83E59CE31B66328400F28333 /* Fabric.framework */,
+				83A35F051B69013700B1EADB /* Crashlytics.framework */,
+				83A35F061B69013700B1EADB /* Fabric.framework */,
 				8358F7BD1965624F007B8201 /* libsqlite3.dylib */,
 				8358F7BB19656247007B8201 /* libz.dylib */,
 				831B5185196048B50035BE47 /* CFNetwork.framework */,
@@ -586,7 +586,7 @@
 			);
 			name = Bouquet;
 			productName = Bouquet;
-			productReference = 83F979D11957347100AE1A06 /* Bouquet.app */;
+			productReference = 83F979D11957347100AE1A06 /* U R Awesome.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -854,7 +854,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "U R Awesome";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -890,7 +890,7 @@
 					"-ObjC",
 					"-all_load",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "U R Awesome";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
