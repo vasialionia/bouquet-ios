@@ -22,7 +22,6 @@
     self.motionLabel = [[YETIMotionLabel alloc] init];
     self.motionLabel.textContainer.lineFragmentPadding = 0.0f;
 
-    self.motionLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:self.motionLabel];
 }
 
