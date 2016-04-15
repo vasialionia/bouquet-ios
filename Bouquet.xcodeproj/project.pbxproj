@@ -160,12 +160,6 @@
 		8358F6D419644456007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8358F6D61964446A007B8201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8358F6D81964446F007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
-		8358F71019655C4E007B8201 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
-		8358F71119655C4E007B8201 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
-		8358F71619655C4E007B8201 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
-		8358F71719655C4E007B8201 /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
-		8358F71819655C4E007B8201 /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
-		8358F71919655C4E007B8201 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		8358F7BB19656247007B8201 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		8358F7BD1965624F007B8201 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -182,6 +176,16 @@
 		837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETILayerAnimation.m; sourceTree = "<group>"; };
 		837CDD8F1B4486B5005E1BA3 /* YETIMotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YETIMotionLabel.h; sourceTree = "<group>"; };
 		837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETIMotionLabel.m; sourceTree = "<group>"; };
+		839654001CC18D0400768F6E /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		839654011CC18D0400768F6E /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		839654021CC18D0400768F6E /* GAIEcommerceFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceFields.h; sourceTree = "<group>"; };
+		839654031CC18D0400768F6E /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProduct.h; sourceTree = "<group>"; };
+		839654041CC18D0400768F6E /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommerceProductAction.h; sourceTree = "<group>"; };
+		839654051CC18D0400768F6E /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIEcommercePromotion.h; sourceTree = "<group>"; };
+		839654061CC18D0400768F6E /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		839654071CC18D0400768F6E /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		839654081CC18D0400768F6E /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		839654091CC18D0400768F6E /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		839D62151CC1492900CF31ED /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		839D621A1CC1494B00CF31ED /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		83F979D11957347100AE1A06 /* U R Awesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U R Awesome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,22 +419,9 @@
 		8358F6E319655C4E007B8201 /* GoogleAnalytics */ = {
 			isa = PBXGroup;
 			children = (
-				8358F70F19655C4E007B8201 /* Library */,
+				839653FF1CC18D0400768F6E /* Library */,
 			);
 			path = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
-		8358F70F19655C4E007B8201 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				8358F71019655C4E007B8201 /* GAI.h */,
-				8358F71119655C4E007B8201 /* GAIDictionaryBuilder.h */,
-				8358F71619655C4E007B8201 /* GAIFields.h */,
-				8358F71719655C4E007B8201 /* GAILogger.h */,
-				8358F71819655C4E007B8201 /* GAITrackedViewController.h */,
-				8358F71919655C4E007B8201 /* GAITracker.h */,
-			);
-			path = Library;
 			sourceTree = "<group>";
 		};
 		8358F7C319657A9A007B8201 /* MWLogging */ = {
@@ -497,6 +488,23 @@
 				837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */,
 			);
 			path = YETIMotionLabel;
+			sourceTree = "<group>";
+		};
+		839653FF1CC18D0400768F6E /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				839654001CC18D0400768F6E /* GAI.h */,
+				839654011CC18D0400768F6E /* GAIDictionaryBuilder.h */,
+				839654021CC18D0400768F6E /* GAIEcommerceFields.h */,
+				839654031CC18D0400768F6E /* GAIEcommerceProduct.h */,
+				839654041CC18D0400768F6E /* GAIEcommerceProductAction.h */,
+				839654051CC18D0400768F6E /* GAIEcommercePromotion.h */,
+				839654061CC18D0400768F6E /* GAIFields.h */,
+				839654071CC18D0400768F6E /* GAILogger.h */,
+				839654081CC18D0400768F6E /* GAITrackedViewController.h */,
+				839654091CC18D0400768F6E /* GAITracker.h */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 		83F979C81957347000AE1A06 = {
