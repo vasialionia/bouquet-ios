@@ -850,6 +850,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(BUILT_PRODUCTS_DIR)/../../Headers",
 					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/Headers\"",
 				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
@@ -886,6 +887,7 @@
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(BUILT_PRODUCTS_DIR)/../../Headers",
 					"$(BUILT_PRODUCTS_DIR)/../../Headers/RestKit",
+					"\"$(BUILD_ROOT)/../IntermediateBuildFilesPath/Headers\"",
 				);
 				INFOPLIST_FILE = "Bouquet/Bouquet-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
