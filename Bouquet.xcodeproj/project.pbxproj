@@ -38,6 +38,8 @@
 		831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 831B5189196048B50035BE47 /* SystemConfiguration.framework */; };
 		831B519519604B9F0035BE47 /* bouquet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 831B519319604B9F0035BE47 /* bouquet.xcdatamodeld */; };
 		831B51AA196076980035BE47 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 831B51A9196076980035BE47 /* LICENSE */; };
+		833039A41B690859001F7601 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833039A21B690859001F7601 /* Fabric.framework */; };
+		833039A51B690859001F7601 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 833039A31B690859001F7601 /* Crashlytics.framework */; };
 		8358F6D51964446A007B8201 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8358F6D71964446A007B8201 /* Localizable.strings */; };
 		8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F75D19655C4F007B8201 /* libGoogleAnalyticsServices.a */; };
 		8358F7BC19656247007B8201 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8358F7BB19656247007B8201 /* libz.dylib */; };
@@ -49,8 +51,7 @@
 		837CDD931B4486B5005E1BA3 /* YETIFallingLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8A1B4486B5005E1BA3 /* YETIFallingLabel.m */; };
 		837CDD941B4486B5005E1BA3 /* YETILayerAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */; };
 		837CDD951B4486B5005E1BA3 /* YETIMotionLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */; };
-		83A35F071B69013700B1EADB /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A35F051B69013700B1EADB /* Crashlytics.framework */; };
-		83A35F081B69013700B1EADB /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A35F061B69013700B1EADB /* Fabric.framework */; };
+		839D621B1CC1494B00CF31ED /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 839D621A1CC1494B00CF31ED /* libc++.tbd */; };
 		83F979D51957347100AE1A06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D41957347100AE1A06 /* Foundation.framework */; };
 		83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D61957347100AE1A06 /* CoreGraphics.framework */; };
 		83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F979D81957347100AE1A06 /* UIKit.framework */; };
@@ -154,6 +155,8 @@
 		831B5189196048B50035BE47 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		831B519419604B9F0035BE47 /* bouquet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = bouquet.xcdatamodel; sourceTree = "<group>"; };
 		831B51A9196076980035BE47 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LICENSE; path = Submodules/RestKit/LICENSE; sourceTree = "<group>"; };
+		833039A21B690859001F7601 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		833039A31B690859001F7601 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		8358F6D419644456007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8358F6D61964446A007B8201 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8358F6D81964446F007B8201 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -179,8 +182,8 @@
 		837CDD8D1B4486B5005E1BA3 /* YETILayerAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETILayerAnimation.m; sourceTree = "<group>"; };
 		837CDD8F1B4486B5005E1BA3 /* YETIMotionLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YETIMotionLabel.h; sourceTree = "<group>"; };
 		837CDD901B4486B5005E1BA3 /* YETIMotionLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YETIMotionLabel.m; sourceTree = "<group>"; };
-		83A35F051B69013700B1EADB /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		83A35F061B69013700B1EADB /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		839D62151CC1492900CF31ED /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		839D621A1CC1494B00CF31ED /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		83F979D11957347100AE1A06 /* U R Awesome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "U R Awesome.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F979D41957347100AE1A06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		83F979D61957347100AE1A06 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -199,16 +202,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				839D621B1CC1494B00CF31ED /* libc++.tbd in Frameworks */,
 				8358F7BE1965624F007B8201 /* libsqlite3.dylib in Frameworks */,
 				8358F7BC19656247007B8201 /* libz.dylib in Frameworks */,
-				83A35F071B69013700B1EADB /* Crashlytics.framework in Frameworks */,
 				831B518A196048B50035BE47 /* CFNetwork.framework in Frameworks */,
 				831B518B196048B50035BE47 /* CoreData.framework in Frameworks */,
 				831B518C196048B50035BE47 /* MobileCoreServices.framework in Frameworks */,
 				831B518D196048B50035BE47 /* Security.framework in Frameworks */,
-				83A35F081B69013700B1EADB /* Fabric.framework in Frameworks */,
+				833039A51B690859001F7601 /* Crashlytics.framework in Frameworks */,
 				831B518E196048B50035BE47 /* SystemConfiguration.framework in Frameworks */,
 				831B5184196048B50035BE47 /* libRestKit.a in Frameworks */,
+				833039A41B690859001F7601 /* Fabric.framework in Frameworks */,
 				83F979D71957347100AE1A06 /* CoreGraphics.framework in Frameworks */,
 				83F979D91957347100AE1A06 /* UIKit.framework in Frameworks */,
 				8358F7AB19655C4F007B8201 /* libGoogleAnalyticsServices.a in Frameworks */,
@@ -516,8 +520,10 @@
 		83F979D31957347100AE1A06 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83A35F051B69013700B1EADB /* Crashlytics.framework */,
-				83A35F061B69013700B1EADB /* Fabric.framework */,
+				839D621A1CC1494B00CF31ED /* libc++.tbd */,
+				839D62151CC1492900CF31ED /* libz.tbd */,
+				833039A21B690859001F7601 /* Fabric.framework */,
+				833039A31B690859001F7601 /* Crashlytics.framework */,
 				8358F7BD1965624F007B8201 /* libsqlite3.dylib */,
 				8358F7BB19656247007B8201 /* libz.dylib */,
 				831B5185196048B50035BE47 /* CFNetwork.framework */,
